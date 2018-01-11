@@ -1,0 +1,39 @@
+/******************************
+Generic CSS for entire page
+*******************************/
+
+body, html {
+  height: 100%;
+}
+
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/**************************
+CSS for header section 
+**************************/
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/**************************
+CSS for secton on work
+**************************/
+
+#work_section_area {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  border: 2px solid yellow;
+}

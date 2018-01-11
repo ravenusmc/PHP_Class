@@ -17,7 +17,9 @@
 
   //Escape the unformatted input 
   $product_description_escaped = htmlspecialchars($product_description);
-  echo 'Current PHP version: ' . phpversion();
+
+  //Keeping this only for my reference
+  //echo 'Current PHP version: ' . phpversion();
 
 ?>
 
