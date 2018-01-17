@@ -35,5 +35,4 @@ CSS for secton on work
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
-  border: 2px solid yellow;
 }
