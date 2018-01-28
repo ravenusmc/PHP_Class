@@ -15,9 +15,25 @@ body {
   box-sizing: border-box;
 }
 
+.center {
+  text-align: center;
+}
+
+h3 {
+  color: black;
+}
+
 h3, h5 {
   font-family: 'Risque', cursive;
   font-size: 20px;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: orange;
 }
 
 
@@ -39,9 +55,24 @@ header {
 CSS for secton on work
 **************************/
 
-#work_section_area {
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+div {
+  margin: 30px;
+  padding: 20px;
+  border: 2px solid black;
+  box-shadow: 5px 10px #888888;
+}
+
+
+/*#work_section_area {
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(6, auto);
   border: 2px solid yellow;
-}
+}*/
