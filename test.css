@@ -15,6 +15,11 @@ body {
   box-sizing: border-box;
 }
 
+h3, h5 {
+  font-family: 'Risque', cursive;
+  font-size: 20px;
+}
+
 
 /**************************
 CSS for header section 
@@ -25,11 +30,9 @@ header {
   flex-direction: column;
   align-items: center;
   font-family: 'Risque', cursive;
+  font-size: 35px;
 }
 
-h1 {
-  font-size: 34px;
-}
 
 
 /**************************
@@ -39,6 +42,6 @@ CSS for secton on work
 #work_section_area {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(6, auto);
   border: 2px solid yellow;
 }
