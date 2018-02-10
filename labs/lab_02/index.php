@@ -28,7 +28,6 @@
   $tax_formatted = "$".number_format($tax, 2);
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
