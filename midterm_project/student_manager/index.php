@@ -3,6 +3,7 @@
 
 //Pulling in the databases
 require('../model/database.php');
+require('../model/student_db.php');
 
 //Setting a default action 
 $action = filter_input(INPUT_POST, 'action');
@@ -13,7 +14,9 @@ if ($action == NULL) {
     }
 }
 
+//Conditional statement for all of the actions 
 if ($action == 'list_students') {
+    $students = get_all_students();
     include('student_list.php');
 }
 

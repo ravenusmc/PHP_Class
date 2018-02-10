@@ -8,6 +8,9 @@ CREATE TABLE students
   letter_grade varchar(10)
 );
 
+INSERT INTO students (student_name, student_grade, letter_grade)
+VALUES ('Tim Mullen', 98, 'A');
+
 
 
 
