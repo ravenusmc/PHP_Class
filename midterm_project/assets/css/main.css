@@ -11,11 +11,109 @@ Generic CSS for Entire Page
   text-align: center;
 }
 
+.initial_btn {
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: #fcad26;
+  font-size: 16px;
+  font-weight: 300px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px #efa424;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.initial_btn:hover {
+  box-shadow: 0 4px #efa424;
+  top: 2px;
+}
+
+.initial_btn:active {
+  box-shadow: none;
+  top: 6px;
+}
+
+
+/*******************************
+CSS for the header page
+********************************/
+
+#main_header {
+  height: 400px;
+  background-image: url(../images/book_student.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#main_header div {
+  border: 2px solid white;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#main_header div h1,h4 {
+  color: white;
+}
+
+
+/*******************************
+CSS for the initial index.php page.
+********************************/
+
+#initial_main {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  border: 2px solid black;
+}
+
 
 /*******************************
 CSS for the student_list.php page 
 ********************************/
 
+#student_list_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 30vh;
+}
+
 table {
   border: 2px solid black;
+  border-radius: 8px;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+#add_student_div {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+#add_student_div a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#add_student_div a:hover {
+  color: orange;
 }

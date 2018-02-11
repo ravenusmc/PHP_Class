@@ -1,7 +1,9 @@
 <?php include '../view/header.php'; ?>
-<main>
+<main id='student_list_main'>
 
-  <h1 class='center'>The Students</h1>
+  <div>
+    <h1>The Students</h1>
+  </div>
 
   <!-- This table will display all of the students -->
   <table>
@@ -22,7 +24,7 @@
         <form action="index.php" method="post">
           <input type="hidden" name="action" value="delete_student">
           <input type="hidden" name="studentID" value="<?php echo $student['studentID']; ?>">
-          <input type="submit" value="Delete">
+          <input class='initial_btn' type="submit" value="Delete">
         </form>
       </td>
     </tr>
@@ -32,8 +34,13 @@
 
   <br>
 
-  <a href="?action=show_add_student_form">Add Student</a>
+  <div id='add_student_div'>
+    <a href="?action=show_add_student_form">Add Student</a>
+  </div>
+  
 
 </main>
+
+<hr>
 
 <?php include '../view/footer.php'; ?>
