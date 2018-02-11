@@ -2,3 +2,20 @@
 All the css in this file will be for the midterm project
 in my PHP class
 ********************************/
+
+/*******************************
+Generic CSS for Entire Page 
+********************************/
+
+.center {
+  text-align: center;
+}
+
+
+/*******************************
+CSS for the student_list.php page 
+********************************/
+
+table {
+  border: 2px solid black;
+}

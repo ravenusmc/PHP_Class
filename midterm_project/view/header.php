@@ -3,7 +3,7 @@
 <!-- the head section -->
 <head>
     <title>Student Grades</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 </head>
 
 <!-- the body section -->

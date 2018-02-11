@@ -1,6 +1,7 @@
 <?php include '../view/header.php'; ?>
 <main>
-  <h1>The Students</h1>
+
+  <h1 class='center'>The Students</h1>
 
   <!-- This table will display all of the students -->
   <table>
@@ -18,8 +19,8 @@
       <td><?php echo $student['student_grade']; ?></td>
       <td><?php echo $student['letter_grade']; ?></td>
       <td>
-        <form action="." method="post">
-          <input type="hidden" name="action" value="delete_product">
+        <form action="index.php" method="post">
+          <input type="hidden" name="action" value="delete_student">
           <input type="hidden" name="studentID" value="<?php echo $student['studentID']; ?>">
           <input type="submit" value="Delete">
         </form>
@@ -29,12 +30,10 @@
 
   </table>
 
-  <a href="">Add Student</a>
+  <br>
 
-
+  <a href="?action=show_add_student_form">Add Student</a>
 
 </main>
-
-
 
 <?php include '../view/footer.php'; ?>
