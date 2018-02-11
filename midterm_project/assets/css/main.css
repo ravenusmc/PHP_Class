@@ -117,3 +117,39 @@ th, td {
 #add_student_div a:hover {
   color: orange;
 }
+
+/*******************************
+CSS for the add_student.php page 
+********************************/
+
+#add_student_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 30vh;
+}
+
+#add_student_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label_fix {
+  font-size: 30px;
+}
+
+#input_size_fix {
+  width: 150px;
+  height: 30px;
+}
+
+/*******************************
+CSS for the footer
+********************************/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

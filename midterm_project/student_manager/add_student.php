@@ -1,30 +1,36 @@
 <?php include '../view/header.php'; ?>
 
-<main>
+<main id='add_student_main'>
 
   <h1>Add Student</h1>
 
-  <form action="index.php" method="post">
+  <form id='add_student_form' action="index.php" method="post">
 
     <input type="hidden" name="action" value="add_student" />
 
-    <label>Student Name:</label>
-    <input type="text" name="student_name" />
+    <div>
+      <label class='label_fix'>Student Name:</label>
+      <input id='input_size_fix' type="text" name="student_name" />
+    </div>
+
     <br>
 
-    <label>Student Grade:</label>
-    <input type="number" name="student_grade" />
+    <div>
+      <label class='label_fix'>Student Grade:</label>
+      <input id='input_size_fix' type="number" name="student_grade" />
+    </div>
+
     <br>
 
     <label>&nbsp;</label>
-    <input type="submit" value="Add Student" />
+    <input class='initial_btn' type="submit" value="Add Student" />
     <br>
 
   </form>
 
 </main>
 
-
+<hr>
 
 
 <?php include '../view/footer.php'; ?>
