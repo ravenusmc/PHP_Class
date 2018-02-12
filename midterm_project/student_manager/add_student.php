@@ -2,7 +2,11 @@
 
 <main id='add_student_main'>
 
-  <h1>Add Student</h1>
+  <div>
+    <h1>Add Student</h1>
+    <h4 class='center'><a class='list_all_students_anchor' href="?action=list_students">See All Students</a></h4>
+  </div>
+  
 
   <form id='add_student_form' action="index.php" method="post">
 

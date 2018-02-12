@@ -7,6 +7,11 @@ in my PHP class
 Generic CSS for Entire Page 
 ********************************/
 
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .center {
   text-align: center;
 }
@@ -127,6 +132,15 @@ CSS for the add_student.php page
   flex-direction: column;
   align-items: center;
   min-height: 30vh;
+}
+
+.list_all_students_anchor {
+  text-decoration: none;
+  color: black;
+}
+
+.list_all_students_anchor:hover {
+  color: orange;
 }
 
 #add_student_form {
