@@ -45,6 +45,10 @@ body {
   top: 6px;
 }
 
+.font {
+  font-family: 'Kavivanar', cursive;
+}
+
 
 /*******************************
 CSS for the header page
@@ -73,16 +77,28 @@ CSS for the header page
   color: white;
 }
 
-
 /*******************************
 CSS for the initial index.php page.
 ********************************/
 
-#initial_main {
+/*#initial_main {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
   border: 2px solid black;
+}*/
+
+#landingMain {
+  min-height: 30vh;
+}
+
+.landingTitle {
+  color: black;
+  text-decoration: none;
+}
+
+.landingTitle:hover {
+  color: orange;
 }
 
 
@@ -132,6 +148,12 @@ CSS for the add_student.php page
   flex-direction: column;
   align-items: center;
   min-height: 30vh;
+}
+
+.addStudentTitle {
+  
+  font-weight: bold;
+  font-size: 45px;
 }
 
 .list_all_students_anchor {
