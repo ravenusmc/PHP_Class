@@ -23,7 +23,7 @@ body {
   cursor: pointer;
   display: block;
   position: relative;
-  background-color: #fcad26;
+  background-color: #F26F55;
   font-size: 16px;
   font-weight: 300px;
   color: white;
@@ -122,6 +122,10 @@ th, td {
   border: 1px solid black;
   text-align: center;
   padding: 8px;
+}
+
+tr:nth-of-type(even) {
+  background-color: #55D8F2;
 }
 
 #add_student_div {
