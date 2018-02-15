@@ -14,4 +14,4 @@ VALUES ('Tim Mullen', 98, 'A');
 
 
 
-The table should include 2 columns; student_name and student_grade (number from 0 - 100).
+--The table should include 2 columns; student_name and student_grade (number from 0 - 100).
