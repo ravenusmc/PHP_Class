@@ -41,10 +41,12 @@ switch ($action) {
 
         // process the scores
         // TODO: Add code that calculates the score total
-        $score_total = $scores[0] + $scores[1] + $scores[2];
+        $score_total = 0;
+
         // $scores_string = '';
         foreach ($scores as $s) {
             $scores_string .= $s . '|';
+            $score_total += $s;
         }
         $scores_string = substr($scores_string, 0, strlen($scores_string)-1);
 

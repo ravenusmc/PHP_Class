@@ -27,14 +27,11 @@ switch ($customer_type){
         }
         break;
     case 'C':
-        if ($invoice_subtotal > 0) {
-            $discount_percent = .2;
-        }
+        $discount_percent = .2;
+
         break;
     case 'c':
-        if ($invoice_subtotal > 0) {
-            $discount_percent = .2;
-        }
+        $discount_percent = .2;
         break; 
     case 'T':
         if ($invoice_subtotal < 500){
