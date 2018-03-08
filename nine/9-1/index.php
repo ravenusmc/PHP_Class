@@ -60,6 +60,7 @@ switch ($action) {
         $phone = str_replace(')', '', $phone);
         $phone = str_replace('-', '', $phone);
         $phone = str_replace(' ', '', $phone);
+        $phone = str_replace('.', '', $phone);
         // 1. make sure the user enters at least seven digits, not including formatting characters
         if (strlen($phone) < 7){
             $message = 'Phone number to short!!!';
