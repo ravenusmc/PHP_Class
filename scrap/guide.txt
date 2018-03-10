@@ -1,0 +1,60 @@
+Create a page that allows a user to enter loan information; 
+  including Loan Amount, 
+  Length of Loan (months or years), 
+  Annual Interest Rate (percentage), and Extra Payment Amount.
+
+  
+
+Loan Amount is in dollars. This field is required.
+
+Length of Loan is an integer in months or years. Include a prompt (such as radio buttons or dropdown list) to indicate payment frequency is for months or years. This field is required.
+
+The loan calculation should adjust appropriately based on months or years selection.
+
+Annual Interest Rate should be entered as a percentage. This field is required.
+
+Make sure that all required fields are entered.
+
+Make sure that all entered fields are valid.
+
+Display the results of the loan calculation.
+Display the Monthly Payment Amount.
+Display the Total Amount to be paid for the loan (principle and interest).
+Display the Total Interest to be paid for the loan.
+Display an Amortization Schedule for the loan.
+Assume the loan starts on the first day of the following month.
+In the Amortization Schedule show the Payment Number, Payment Date, Payment Amount, Principle Amount, Interest Amount, Extra Payment Amount (if entered), and Loan Balance.
+
+
+
+
+
+/////////////////////////// ORIGINAL VERSION BELOW /////////////////////////
+
+
+
+
+Create a page that allows a user to enter loan information; 
+  including Loan Amount, 
+  Length of Loan (months or years), 
+  Annual Interest Rate (percentage), and Extra Payment Amount.
+
+Loan Amount is in dollars. This field is required.
+
+Length of Loan is an integer in months or years. Include a prompt (such as radio buttons or dropdown list) to indicate payment frequency is for months or years. This field is required.
+
+The loan calculation should adjust appropriately based on months or years selection.
+
+Annual Interest Rate should be entered as a percentage. This field is required.
+
+Make sure that all required fields are entered.
+
+Make sure that all entered fields are valid.
+
+Display the results of the loan calculation.
+Display the Monthly Payment Amount.
+Display the Total Amount to be paid for the loan (principle and interest).
+Display the Total Interest to be paid for the loan.
+Display an Amortization Schedule for the loan.
+Assume the loan starts on the first day of the following month.
+In the Amortization Schedule show the Payment Number, Payment Date, Payment Amount, Principle Amount, Interest Amount, Extra Payment Amount (if entered), and Loan Balance.
