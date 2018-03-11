@@ -6,6 +6,7 @@ main {
 
 table {
   border: 2px solid black;
+  border-radius: 8px;
 }
 
 tr th {
@@ -15,4 +16,8 @@ tr th {
 tr td {
   text-align: center;
   border: 1px solid black;
+}
+
+tr:nth-of-type(even) {
+  background-color: #55D8F2;
 }

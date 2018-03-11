@@ -7,24 +7,9 @@ Make sure that all required fields are entered.
 
 Make sure that all entered fields are valid.
 
-Display the results of the loan calculation.
-Display the Monthly Payment Amount.
+
 Display the Total Amount to be paid for the loan (principle and interest).
 Display the Total Interest to be paid for the loan.
-
-Display an Amortization Schedule for the loan.
-
-Assume the loan starts on the first day of the following month.
-
-
-            <tr>
-              <th>Payment Date</th>
-              <th>Payment Number</th>
-              <th>Payment Amount</th>
-              <th>Principle Amount</th>
-              <th>Interest Amount</th>
-              <th>Loan Balance</th>
-            </tr>
 
 
 

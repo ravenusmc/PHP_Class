@@ -1,6 +1,6 @@
 <?php 
 
-  
+                  <td><?php dateCalc($current_date_in_func); ?></td>
   
 
 
