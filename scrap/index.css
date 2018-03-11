@@ -3,3 +3,16 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+table {
+  border: 2px solid black;
+}
+
+tr th {
+  padding: 10px;
+}
+
+tr td {
+  text-align: center;
+  border: 1px solid black;
+}

@@ -24,11 +24,15 @@
                 <label>Loan Amount:</label>
                 <input type="text" name="loan_amount"><br>
 
+                <label>Interest Rate:</label>
+                <input type="text" name="interest_rate"><span>%</span><br>
+
                 <label>Length of Loan:</label>
                 <input type="text" name="loan_length"><br>
 
-                <label>Interest Rate:</label>
-                <input type="text" name="Interest Rate"><span>%</span><br>
+                <label>Loan for Months or Years:</label><br>
+                <input type='radio' name='time_span' value='months' checked>Months<br>
+                <input type='radio' name='time_span' value='years'>Years 
             </div>
 
             <div id="buttons">
