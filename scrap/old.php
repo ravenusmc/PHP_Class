@@ -1,12 +1,5 @@
 <?php 
 
-                  <td><?php dateCalc($current_date_in_func); ?></td>
-  
-
-
-
-
-
 
 // $time_format = 'F j, Y';
   // //Creating the object using the DateTime class

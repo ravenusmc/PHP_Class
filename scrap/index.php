@@ -8,16 +8,11 @@
 <body>
 
     <header>
-
-
     </header>
 
     <main id='home_main'>
-
         <h1 class='center font'>Loan Calculator</h1>
-
         <div id='home_main_div'>
-
             <form action="results.php" method="post">
                 <div id="data">
                     <label class='font'>Loan Amount: $</label>
@@ -35,15 +30,12 @@
                         <input type='radio' name='time_span' value='years'>Years 
                     </div>
                 </div>
-
                 <div id="buttons">
                     <label>&nbsp;</label>
                     <input class='initial_btn' type="submit" value="Calculate Loan"><br>
                 </div>
             </form>
-
         </div>
-
     </main>
 
     <hr>
