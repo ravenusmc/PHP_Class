@@ -98,6 +98,23 @@
     return $total_interest;
   }
 
+  // $total_interest_balanace_two = $loan_amount;
+  // $total_interest_two = 0;
+
+  // function get_total_interest_two(&$total_interest_balanace_two, $interest_rate, $total_interest, $payment, $loan_length) {
+
+  //   $interest = $total_interest_balanace * $interest_rate;
+  //   $principal = $payment - $interest;
+  //   $total_interest_balanace = $total_interest_balanace - $principal;
+  //   $total_interest_two = $interest + $total_interest;
+  //   echo number_format($total_interest_two, 2);
+  //   return $total_interest_two;
+  // }
+
+  // $total_interest_two
+
+
+
   //These variables will be used in the time function to show the date. 
   $current_Date = new DateTime();
   $current_date_in_func = $current_Date; 
@@ -133,6 +150,7 @@
 
         <div>
           <p>The amount of your loan was: $<?php echo $loan_amount ?>, over <?php echo $time_num . ' ' . $time_span ?>.</p>
+          <p>Your interest rate is: <?php echo $interest_rate ?>%</p>
           <p>Your monthly payments will be: $<?php echo number_format($payment, 2) ?></p>
         </div>
 
@@ -178,6 +196,12 @@
 
 
     </main>
+
+    <footer>
+        <p class="font copyright">
+            &copy; <?php echo date("Y"); ?> Cuddy Loan Calculator, Inc.
+        </p>
+    </footer>
 
 </body>
 </html>

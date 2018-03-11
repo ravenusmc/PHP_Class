@@ -1,12 +1,9 @@
 
 Loan Amount is in dollars. This field is required.
 
-The loan calculation should adjust appropriately based on months or years selection.
-
 Make sure that all required fields are entered.
 
 Make sure that all entered fields are valid.
-
 
 Display the Total Amount to be paid for the loan (principle and interest).
 Display the Total Interest to be paid for the loan.

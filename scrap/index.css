@@ -1,3 +1,92 @@
+/*******************************
+The CSS in this file will be for the loan calculator project
+********************************/
+
+.center {
+  text-align: center;
+}
+
+.initial_btn {
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: #F26F55;
+  font-size: 16px;
+  font-weight: 300px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px #efa424;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.initial_btn:hover {
+  box-shadow: 0 4px #efa424;
+  top: 2px;
+}
+
+.initial_btn:active {
+  box-shadow: none;
+  top: 6px;
+}
+
+.font {
+  font-family: 'Kavivanar', cursive;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*******************************
+Generic CSS for home page
+********************************/
+
+header {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(calc.jpg);
+}
+
+#home_main {
+  margin-bottom: 50px;
+}
+
+#home_main_div {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 10px 16px teal;
+}
+
+.type_field {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/*******************************
+Generic CSS for results page
+********************************/
+
+
 main {
   display: flex;
   flex-direction: column;
