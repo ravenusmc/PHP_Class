@@ -11,18 +11,18 @@
     </header>
 
     <main id='home_main'>
+
         <h1 class='center font'>Loan Calculator</h1>
+
         <div id='home_main_div'>
             <form action="results.php" method="post">
                 <div id="data">
-                    <label class='font'>Loan Amount: $</label>
-                    <input type="text" name="loan_amount"><br>
+                    
+                    <input class='num_inputs' placeholder="LOAN AMOUNT" type="text" name="loan_amount"><br>
 
-                    <label class='font'>Interest Rate:</label>
-                    <input type="text" name="interest_rate"><br>
+                    <input class='num_inputs' type="text" placeholder="INTEREST RATE" name="interest_rate"><br>
 
-                    <label class='font'>Length of Loan:</label>
-                    <input type="text" name="loan_length"><br>
+                    <input class='num_inputs' type="text" placeholder="LENGTH OF LOAN" name="loan_length"><br>
 
                     <label class='font'>Loan for Months or Years:</label><br>
                     <div class='type_field'>
@@ -36,6 +36,7 @@
                 </div>
             </form>
         </div>
+
     </main>
 
     <hr>
