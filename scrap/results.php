@@ -19,6 +19,11 @@
   $interest_rate = filter_input(INPUT_POST, 'interest_rate');
   $time_span = filter_input(INPUT_POST, 'time_span');
 
+  //Realizing that I display the interest rate modified, I'm creating a variable 
+  //That will be a 'constant' for the user rate that is entered. I realized this 
+  //after most of my code was written. 
+  $original_interest_rate = $interest_rate;
+
   //Validation to ensure that the user entered all of the information. 
   if (empty($loan_amount)) {
     $message = 'Please fill out the box for the loan amount!';
@@ -98,9 +103,13 @@
     return $total_interest;
   }
 
+  //This function will return the total interest that will display in the information panel. 
+  function display_total_interest($loan_amount, $interest_rate, $time_num, $payment, $time_span) {
 
-  function display_total_interest($loan_amount, $interest_rate, $time_num, $payment) {
-
+    if ($time_span == 'years'){
+      $time_num = $time_num * 12;
+    }
+  
     $total_interest = 0;
     $loan = $loan_amount;
 
@@ -114,14 +123,15 @@
     return $total_interest;
   }
 
-  $total_interest_display = display_total_interest($loan_amount, $interest_rate, $time_num, $payment);
 
+
+  $total_interest_display = display_total_interest($loan_amount, $interest_rate, $time_num, $payment, $time_span);
 
   //These variables will be used in the time function to show the date. 
   $current_Date = new DateTime();
   $current_date_in_func = $current_Date; 
 
-  //TIME FUNCTION
+  //This function will display the month and year for the payment schedule. 
   function dateCalc($current_date_in_func){
 
       //Getting the time formatted how I want it. 
@@ -134,9 +144,6 @@
       echo $month_added;
   }
 
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -146,21 +153,38 @@
 </head>
 <body>
 
-    <main>
+    <header id='results_header'>
+      <div>
+        <h5 class='center'>
+          Opportunity is missed by most people because<br /> it is dressed in overalls 
+          and looks like work.<br />
+          --Thomas Edison
+        </h5>
+      </div>
+    </header>
 
-        <h1>Information on Loan:</h1>
+    <main id='results_main'>
+
+      <div id='information_div'>
+
+        <h1 class='center'>Information on Loan:</h1>
 
         <div>
-          <p>The amount of your loan was: $<?php echo $loan_amount ?>, over <?php echo $time_num . ' ' . $time_span ?>.</p>
-          <p>Your interest rate is: <?php echo $interest_rate ?>%</p>
-          <p>Your monthly payments will be: $<?php echo number_format($payment, 2) ?></p>
-          <p>The Total interest on the loan is: $<?php echo number_format($total_interest_display, 2) ?></p>
+          <p><span>The amount of your loan was: $</span><?php echo $loan_amount ?>. </p>
+          <p><span>Time Period: </span><?php echo $time_num . ' ' . $time_span ?>. </p>
+          <p><span>Your interest rate is: </span><?php echo $original_interest_rate ?>%</p>
+          <p><span>Your monthly payments will be: $</span><?php echo number_format($payment, 2) ?></p>
+          <p><span>The Total interest on the loan is: $</span><?php echo number_format($total_interest_display, 2) ?></p>
         </div>
 
         <h1><?php echo $message; ?></h1>
 
+      </div>
+
+      <div id='table_div'>
         <h1>Amortization Schedule</h1>
         <table>
+
           <thead>
             <tr>
               <th>Payment Date</th>
@@ -174,11 +198,8 @@
           </thead>
 
           <tbody>
-
             <?php for ($i = 1; $i <= $loan_length; $i++) { ?>
-
               <tr>
-                <!-- <td>DATE</td> -->
                 <td><?php dateCalc($current_date_in_func); ?></td>
                 <td><?php echo $i; ?></td>
                 <td>$<?php payment($payment); ?></td>
@@ -187,14 +208,11 @@
                 <td>$<?php $total_interest = get_total_interest($total_interest_balanace, $interest_rate, $total_interest, $payment); ?></td>
                 <td>$<?php show_balance($balance); ?></td>
               </tr>
-
-              
-
             <?php } ?>
-
           </tbody>
 
         </table>
+      </div>
 
 
 
