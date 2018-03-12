@@ -139,14 +139,14 @@ Generic CSS for results page
   padding-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-gap: 2em;
+  grid-gap: 1em;
   border-bottom: 2px solid black;
 
 }
 
 #information_div {
   border: 2px solid black;
-  height: 350px;
+  height: 400px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 10px 16px teal;

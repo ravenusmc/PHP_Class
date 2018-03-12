@@ -144,6 +144,32 @@
       echo $month_added;
   }
 
+  //In the grand tradition of writing everything twice, this function will allow me 
+  //to display the actual final payoff date in the information div. 
+  $current_Date_2 = new DateTime();
+  $current_date_func = $current_Date_2; 
+
+  function final_payment_date($current_date_func, $time_span, $time_num) {
+    
+    if ($time_span == 'years'){
+      $time_num = $time_num * 12;
+    }
+
+    for ($i = 0; $i < $time_num; $i++){
+      //Getting the time formatted how I want it. 
+      $time_format = 'F Y';
+      //Add one month to the DateTime Object
+      $add_month_2 = new DateInterval('P1M');
+      //$current_Date = new DateTime();
+      $month_2 = $current_date_func->add($add_month_2);
+      $month_added_2 = $month_2->format($time_format);
+    }
+
+    return $month_added_2;
+  }
+
+  $month_added_2 = final_payment_date($current_date_func, $time_span, $time_num);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -175,6 +201,7 @@
           <p><span>Your interest rate is: </span><?php echo $original_interest_rate ?>%</p>
           <p><span>Your monthly payments will be: $</span><?php echo number_format($payment, 2) ?></p>
           <p><span>The Total interest on the loan is: $</span><?php echo number_format($total_interest_display, 2) ?></p>
+          <p><span>You will have your loan paid off on: </span><?php echo $month_added_2 ?></p>
         </div>
 
         <h1><?php echo $message; ?></h1>
