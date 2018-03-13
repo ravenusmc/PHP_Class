@@ -16,9 +16,9 @@ function hide_data() {
   }else if (loanLength === "") {
     localStorage.setItem("Value", "hide");
   }else {
+    //If the form is all filled in than the local storage is set to not hide. 
     localStorage.setItem("Value", "noHide");
   }
-
 
 } 
 

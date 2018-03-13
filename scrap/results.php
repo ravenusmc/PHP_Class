@@ -123,8 +123,6 @@
     return $total_interest;
   }
 
-
-
   $total_interest_display = display_total_interest($loan_amount, $interest_rate, $time_num, $payment, $time_span);
 
   //These variables will be used in the time function to show the date. 
@@ -168,7 +166,7 @@
     return $month_added_2;
   }
 
-  $month_added_2 = final_payment_date($current_date_func, $time_span, $time_num);
+  $last_payment = final_payment_date($current_date_func, $time_span, $time_num);
 
 ?>
 <!DOCTYPE html>
@@ -207,7 +205,7 @@
           <p><span>Interest Rate: </span><?php echo $original_interest_rate ?>%</p>
           <p><span>Monthly Payments: $</span><?php echo number_format($payment, 2) ?></p>
           <p><span>Total Interest: $</span><?php echo number_format($total_interest_display, 2) ?></p>
-          <p><span>Est. PayOff Date: </span><?php echo $month_added_2 ?></p>
+          <p><span>Est. PayOff Date: </span><?php echo $last_payment ?></p>
         </div>
 
       </div>

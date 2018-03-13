@@ -2,8 +2,10 @@
 //hidden and the PHP code will display an error message. 
 function hideSecondPageTags() {
 
+  //Getting the value of the localstorage variable
   let myVar = localStorage.getItem("Value");
 
+  //if the local variable value is hide then the HTML Tag main will be hidden. 
   if (myVar == 'hide'){
     document.getElementById('results_main').style.display = 'none';
   }

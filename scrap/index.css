@@ -195,3 +195,12 @@ tr:nth-of-type(even) {
   background-color: #55D8F2;
 }
 
+/* MEDIA QUERIES */
+@media only all and (max-width: 768px){
+
+  #results_main {
+      grid-template-columns: 1fr;
+  }
+
+}
+
