@@ -18,11 +18,14 @@
             <form action="results.php" method="post">
                 <div id="data">
                     
-                    <input class='num_inputs' placeholder="LOAN AMOUNT" type="text" name="loan_amount"><br>
+                    <label>Loan Amount:</label>
+                    <input id='loanAmount' class='num_inputs' type="text" name="loan_amount"><br>
 
-                    <input class='num_inputs' type="text" placeholder="INTEREST RATE" name="interest_rate"><br>
+                    <label>Interest Rate:</label>
+                    <input id='interestRate' class='num_inputs' type="text" name="interest_rate"><br>
 
-                    <input class='num_inputs' type="text" placeholder="LENGTH OF LOAN" name="loan_length"><br>
+                    <label>Length of Loan:</label>
+                    <input id='loanLength' class='num_inputs' type="text" name="loan_length"><br>
 
                     <label class='font'>Loan for Months or Years:</label><br>
                     <div class='type_field'>
@@ -32,7 +35,7 @@
                 </div>
                 <div id="buttons">
                     <label>&nbsp;</label>
-                    <input class='initial_btn' type="submit" value="Calculate Loan"><br>
+                    <input onclick='hide_data();' class='initial_btn' type="submit" value="Calculate Loan"><br>
                 </div>
             </form>
         </div>
@@ -47,5 +50,6 @@
         </p>
     </footer>
 
+<script type="text/javascript" src='index.js'></script>
 </body>
 </html>

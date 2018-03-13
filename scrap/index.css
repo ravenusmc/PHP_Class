@@ -132,6 +132,21 @@ Generic CSS for results page
   font-size: 20px;
 }
 
+#go_back_div {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+
+a:hover {
+  color: orange;
+}
+
+
 #results_main {
   margin-top: 50px;
   margin-left: 5%;
@@ -146,7 +161,7 @@ Generic CSS for results page
 
 #information_div {
   border: 2px solid black;
-  height: 400px;
+  height:350px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 10px 16px teal;

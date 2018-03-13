@@ -189,6 +189,12 @@
       </div>
     </header>
 
+    <h1 class='center'><?php echo $message; ?></h1>
+    <div id='go_back_div'>
+      <a class='center' href="index.php">Go Back / New Calculation</a>
+    </div>
+    
+
     <main id='results_main'>
 
       <div id='information_div'>
@@ -196,15 +202,13 @@
         <h1 class='center'>Information on Loan:</h1>
 
         <div>
-          <p><span>The amount of your loan was: $</span><?php echo $loan_amount ?>. </p>
+          <p><span>Loan Amount: $</span><?php echo $loan_amount ?>. </p>
           <p><span>Time Period: </span><?php echo $time_num . ' ' . $time_span ?>. </p>
-          <p><span>Your interest rate is: </span><?php echo $original_interest_rate ?>%</p>
-          <p><span>Your monthly payments will be: $</span><?php echo number_format($payment, 2) ?></p>
-          <p><span>The Total interest on the loan is: $</span><?php echo number_format($total_interest_display, 2) ?></p>
-          <p><span>You will have your loan paid off on: </span><?php echo $month_added_2 ?></p>
+          <p><span>Interest Rate: </span><?php echo $original_interest_rate ?>%</p>
+          <p><span>Monthly Payments: $</span><?php echo number_format($payment, 2) ?></p>
+          <p><span>Total Interest: $</span><?php echo number_format($total_interest_display, 2) ?></p>
+          <p><span>Est. PayOff Date: </span><?php echo $month_added_2 ?></p>
         </div>
-
-        <h1><?php echo $message; ?></h1>
 
       </div>
 
@@ -251,5 +255,7 @@
         </p>
     </footer>
 
+<script type="text/javascript" src='index.js'></script>
+<script type="text/javascript" src='second.js'></script>
 </body>
 </html>
