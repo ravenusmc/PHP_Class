@@ -54,7 +54,7 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(calc.jpg);
+  background-image: url(../images/calc.jpg);
 }
 
 #home_main {
@@ -110,7 +110,7 @@ Generic CSS for results page
 ********************************/
 
 #results_header {
-    background-image: url(wall_street.jpg);
+    background-image: url(../images/wall_street.jpg);
     background-size: cover;
     background-position: cover;
     background-repeat: no-repeat;

@@ -3,7 +3,7 @@
 <head>
   <title>Project</title>
   <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body>
 
@@ -50,6 +50,6 @@
         </p>
     </footer>
 
-<script type="text/javascript" src='index.js'></script>
+<script type="text/javascript" src='assets/js/index.js'></script>
 </body>
 </html>
