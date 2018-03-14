@@ -1,7 +1,6 @@
 //The purpose of this function is to check whether all of the form values are filled out. If they 
 //are not then the values will be placed into local storage to be used on the results.php page to hide
-//The table and information. To see how that code is executed, look at the second.js file. 
-alert('hi');
+//The table and information. To see how that code is executed, look at the second.js file.  
 function hide_data() {
 
   //Getting the values on the form 

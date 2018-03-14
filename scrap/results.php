@@ -1,6 +1,17 @@
 <?php
-  //Requiring a file that will help run the program. 
-  require('controller.php');
+
+  //function for calculating loan
+  function loan_calc($loan_amount, $loan_length, $interest_rate) {
+    //The math in this line will actually calculate the loan payment 
+    $payment = ($interest_rate * ($loan_amount)) / (1 - (1 + $interest_rate) ** -$loan_length );
+    return $payment;
+  }
+
+  //Converting the interest rate to a percentage 
+  function convert_interest($interest_rate) {
+    $interest_rate = $interest_rate / 100;
+    return $interest_rate;
+  }
 
   //Getting the data from the form
   $loan_amount = filter_input(INPUT_POST, 'loan_amount');
@@ -49,6 +60,27 @@
   //functions to calculate the interest. 
   $balance = $loan_amount;
 
+  //This function will calculate the principal portion of the loan.
+  function show_principal($balance, $payment, $interest_rate) {
+      $interest = $interest_rate * $balance;
+      $principal = $payment - $interest;
+      $balance = $balance - $principal; //For some reason this line is not working
+      $principal = number_format($principal, 2);
+      echo $principal;
+      return $balance; 
+  } 
+
+  //This function will show the balance as it changes from payment to payment. 
+  function show_balance($balance) {
+
+      if ($balance < 0){
+        $balance = 0;
+        echo number_format($balance,2);
+      }else {
+        echo number_format($balance,2); 
+      }
+      
+  }
 
   //This function will show the payments for each month. 
   function payment($payment) {
