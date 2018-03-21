@@ -182,6 +182,10 @@ table {
   border-radius: 8px;
 }
 
+/*thead {
+  position: fixed;
+}*/
+
 tr th {
   padding: 15px;
 }
