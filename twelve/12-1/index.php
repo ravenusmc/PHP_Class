@@ -6,7 +6,9 @@ session_set_cookie_params($lifetime, '/');
 session_start(); //This will start the session. 
 
 // Create a cart array if needed
-if (empty($_SESSION['cart'])) { $_SESSION['cart'] = array(); }
+if (empty($_SESSION['cart'])) { 
+    $_SESSION['cart'] = array(); 
+}
 
 // Create a table of products
 $products = array();
