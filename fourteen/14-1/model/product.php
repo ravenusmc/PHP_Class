@@ -1,11 +1,13 @@
 <?php
 class Product {
+
     private $category, $id, $code, $name, $price;
 
     public function __construct() {
-        $this->category = NULL;
-        $this->code = '';
+        $this->category = null;
+        $this->id = 0;
         $this->name = '';
+        $this->description = '';
         $this->price = 0;
     }
 
