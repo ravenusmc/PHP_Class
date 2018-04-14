@@ -15,7 +15,7 @@
         <h1 class='center font'>Loan Calculator</h1>
 
         <div id='home_main_div'>
-            <form action="results.php" method="post">
+            <form method="POST" action="results.php" >
                 <div id="data">
                     
                     <label>Loan Amount:</label>

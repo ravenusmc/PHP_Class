@@ -11,8 +11,10 @@ class ProductDB {
         $query = "SELECT * FROM products
                   WHERE categoryID = '$category_id'
                   ORDER BY productID";
+
         $result = $db->query($query);
         $products = array();
+        
         foreach ($result as $row) {
             $product = new Product();
             $product->setCategory($category);

@@ -24,7 +24,6 @@
   //after most of my code was written. 
   $original_interest_rate = $interest_rate;
 
-
   //Validation to ensure that the user entered all of the information. 
   if (empty($loan_amount)) {
     $message = 'Please fill out the box for the loan amount!';
@@ -32,13 +31,17 @@
     $message = 'Please fill out the box for the loan length!';
   }else if (empty($interest_rate)) {
     $message = 'Please fill out the box for the interest rate';
-  }else if ($loan_amount < 0) {
-    $message_two = 'Loan Amount Cannot Be Less Than Zero';
-  }else if ($interest_rate < 0) {
-    $message_two = 'Interest Rate Cannot Be Less Than Zero';
-  }else if ($loan_length < 0) {
-    $message_two = 'Loan Length Cannot Be Less Than Zero';
+  }else if ($loan_amount < 0 || !is_numeric($loan_amount)) {
+    $message_two = 'Loan Amount Cannot Be Less Than Zero OR must be a number';
+  }else if ($interest_rate < 0 || !is_numeric($interest_rate)) {
+    $message_two = 'Interest rate Cannot Be Less Than Zero OR must be a number';
+  }else if ($loan_length < 0 || !is_numeric($loan_length)) {
+    $message_two = 'Loan length Cannot Be Less Than Zero OR must be a number';
   }
+
+  // else if (!is_numeric($loan_amount)){
+  //   $message_two = 'Loan Amount Cannot Be Less Than Zero OR must be a number';
+  // }
 
   //Converting interest rate to decimal 
   $interest_rate = convert_interest($interest_rate);
@@ -179,7 +182,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project</title>
+  <title>Final Project</title>
   <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body>
