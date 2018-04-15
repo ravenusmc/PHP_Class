@@ -39,10 +39,6 @@
     $message_two = 'Loan length Cannot Be Less Than Zero OR must be a number';
   }
 
-  // else if (!is_numeric($loan_amount)){
-  //   $message_two = 'Loan Amount Cannot Be Less Than Zero OR must be a number';
-  // }
-
   //Converting interest rate to decimal 
   $interest_rate = convert_interest($interest_rate);
 
@@ -157,6 +153,7 @@
   $current_Date_2 = new DateTime();
   $current_date_func = $current_Date_2; 
 
+  //This function will get the final payment date. 
   function final_payment_date($current_date_func, $time_span, $time_num) {
     
     if ($time_span == 'years'){
