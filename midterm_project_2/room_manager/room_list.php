@@ -34,10 +34,10 @@
   </table>
 
   <a href="?action=add_room_form">Add Room</a>
+  <a href="?action=make_reservation">Make Reservation</a>
 
 </main>
 <!-- End of the main section -->
-
 
 
 

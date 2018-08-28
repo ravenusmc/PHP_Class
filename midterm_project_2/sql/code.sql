@@ -5,9 +5,17 @@ CREATE TABLE rooms (
     room_name VARCHAR(30),
 );
 
+CREATE TABLE room_reservations (
+  reservation_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  room_id INT 
+  start_date,
+  end_date 
+)
+
+
+
 INSERT INTO rooms(room_name) 
 VALUES('Conf One')
-
 
 drop table rooms;
 

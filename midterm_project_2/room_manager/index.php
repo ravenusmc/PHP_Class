@@ -50,4 +50,8 @@
       //Redirecting the site back to the list rooms page.
       header('Location: .?action=list_rooms');
       break;
+    //This case will take the user to the reservation page
+    case 'make_reservation':
+      include('reservation_page.php');
+      break;
 }

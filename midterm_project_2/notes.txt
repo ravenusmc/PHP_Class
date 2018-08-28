@@ -44,6 +44,8 @@ https://stackoverflow.com/questions/4802335/checking-if-date-is-weekend-php
 For time: 
 https://stackoverflow.com/questions/26978521/php-check-if-time-falls-within-range-questioning-common-solution
 
+https://www.solodev.com/blog/web-design/adding-a-datetime-picker-to-your-forms.stml
+
 
 FROM validate.pgp in 15-1
 
