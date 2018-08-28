@@ -1,0 +1,65 @@
+Task:
+Create a conference room scheduler PHP web application.
+
+The application should allow a user to maintain a list of conference rooms.
+
+The application should allow a user to reserve a conference room for a specified date and time range.
+The application should allow a user to select a conference room from the list of conference rooms and specify the date and time range for their reservation.
+The specified date and time range for the reservation should include the start and end date and times.
+Only allow reservations on the same day. Reservations cannot span days.
+Only allow reservations during the business hours of 8:00am to 5:00pm on weekdays.
+Do not allow reservations outside of business hours or during the weekends.
+
+Verify that all user input is correct.
+Display error messages where appropriate.
+
+Create a new table in your database to store a list of conference rooms.
+Insert at least three conference rooms to start with.
+
+Create the web pages necessary to list, add and delete conference rooms.
+
+Create a new table in your database to store the conference room reservation schedules.
+Create the web pages necessary to list, add and delete conference room reservations.
+The list of conference room reservations should be sorted in date and start time order.
+
+Text Book: Page 294 chapter 10
+
+Stackover flow entrees: 
+https://stackoverflow.com/questions/976669/how-to-check-if-a-date-is-in-a-given-range
+
+To see weekends:
+https://stackoverflow.com/questions/4802335/checking-if-date-is-weekend-php
+
+For time: 
+https://stackoverflow.com/questions/26978521/php-check-if-time-falls-within-range-questioning-common-solution
+
+
+FROM validate.pgp in 15-1
+
+public function birthday($name, $value, $required = true) {
+        $field = $this->fields->getField($name);
+
+        //This will determine if there is an error. 
+        $this->text($name, $value, $required);
+            if ($field->hasError()) { return; }  
+
+        //Getting the pattern from Page 481 in the text. 
+        $date_pattern = '/^(0?[1-9]|1[0-2])\/(0?[1-9]|[12][[:digit:]]|3[01])\/[[:digit:]]{4}$/';
+        $message = 'Date Format WRONG!!!.';
+        $this->pattern($name, $value, $date_pattern, $message, $required);
+
+        //Setting the time stamps 
+        $birthday = new DateTime($value);
+        //I have to get the current date to compare the birthday to. 
+        $current_date = new DateTime(); 
+        
+        //Checking to see if the birthday is in the future. 
+        if ($birthday > $current_date) {
+            //If the birthday is in the future, this message is displayed. 
+            $field->setErrorMessage('Birthday cannot be in the future!');
+                return;
+        }
+        
+    }//End Birthday function
+
+Check
