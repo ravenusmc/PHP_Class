@@ -16,6 +16,32 @@
   }
 
 
+  //This function adds a room to the rooms table
+  function add_room($room_name) {
+    global $db;
+    $query = 'INSERT INTO rooms
+                  (room_name)
+                VALUES
+                  (:room_name)';
+      $statement = $db->prepare($query);
+      $statement->bindValue(':room_name', $room_name);
+      $statement->execute();
+      $statement->closeCursor();
+  }
+
+
+  //This function will delete a room from the rooms table. 
+  function delete_room($room_id){
+    global $db;
+    $query = 'DELETE FROM rooms
+              WHERE room_id = :room_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':room_id', $room_id);
+    $statement->execute();
+    $statement->closeCursor();
+  }
+
+
 
 
 
