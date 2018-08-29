@@ -52,6 +52,8 @@
       break;
     //This case will take the user to the reservation page
     case 'make_reservation_form':
+      $rooms = get_all_rooms();
+      $all_reservations = get_all_reservations();
       include('reservation_page.php');
       break;
     //This case will make the reservation
@@ -68,11 +70,15 @@
       $day_to = filter_input(INPUT_POST, 'day_to');
       $time_to = filter_input(INPUT_POST, 'time_to');
 
+      //Getting the room id number 
+      $room_id = filter_input(INPUT_POST, 'room_id');
+
       //creating from data time stamps 
       $from_date = $year_from . '-' . $month_from . '-' . $day_from . ' ' . $time_from;
       $to_date = $year_to . '-' . $month_to . '-' . $day_to . ' ' . $time_to;
 
-      
+      //Calling the make_reseravation function 
+      make_reservation($room_id, $from_date, $to_date);
 
       header('Location: .?action=list_rooms');
       break;
