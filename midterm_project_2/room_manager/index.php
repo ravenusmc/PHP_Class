@@ -51,7 +51,29 @@
       header('Location: .?action=list_rooms');
       break;
     //This case will take the user to the reservation page
-    case 'make_reservation':
+    case 'make_reservation_form':
       include('reservation_page.php');
+      break;
+    //This case will make the reservation
+    case 'make_reservation':
+      //Getting the from date data 
+      $year_from = filter_input(INPUT_POST, 'year_from');
+      $month_from = filter_input(INPUT_POST, 'month_from');
+      $day_from = filter_input(INPUT_POST, 'day_from');
+      $time_from = filter_input(INPUT_POST, 'time_from');
+
+      //Getting the to date data
+      $year_to = filter_input(INPUT_POST, 'year_to');
+      $month_to = filter_input(INPUT_POST, 'month_to');
+      $day_to = filter_input(INPUT_POST, 'day_to');
+      $time_to = filter_input(INPUT_POST, 'time_to');
+
+      //creating from data time stamps 
+      $from_date = $year_from . '-' . $month_from . '-' . $day_from . ' ' . $time_from;
+      $to_date = $year_to . '-' . $month_to . '-' . $day_to . ' ' . $time_to;
+
+      
+
+      header('Location: .?action=list_rooms');
       break;
 }
