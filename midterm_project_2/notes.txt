@@ -3,10 +3,10 @@ Create a conference room scheduler PHP web application.
 The application should allow a user to maintain a list of conference rooms.
 
 
-Do not allow reservations outside of business hours or during the weekends.
+
 
 Only allow reservations on the same day. Reservations cannot span days.
-Only allow reservations during the business hours of 8:00am to 5:00pm on weekdays.
+
 
 
 Display error messages where appropriate.
@@ -27,6 +27,10 @@ Create a new table in your database to store the conference room reservation sch
 Create the web pages necessary to list, add and delete conference room reservations.
 
 The list of conference room reservations should be sorted in date and start time order.
+
+Do not allow reservations outside of business hours or during the weekends.
+
+only allow reservations during the business hours of 8:00am to 5:00pm on weekdays.
 
 
 
