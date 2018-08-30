@@ -77,9 +77,31 @@
       $from_date = $year_from . '-' . $month_from . '-' . $day_from . ' ' . $time_from;
       $to_date = $year_to . '-' . $month_to . '-' . $day_to . ' ' . $time_to;
 
+      $test = strtotime($from_date);
+
+      // echo $test;
+
+      //Will return 1 if its the weekend!!!
+      echo (date('N', strtotime($from_date)) >= 6);
+
+      $message = 1;
+
       //Calling the make_reseravation function 
       make_reservation($room_id, $from_date, $to_date);
 
-      header('Location: .?action=list_rooms');
+      header('Location: .?action=make_reservation_form');
       break;
+    //This case will delete a reservation
+    case 'delete_reservation':
+      //Getting the reservation id when the user pushed the delete key
+      $reservation_id = filter_input(INPUT_POST, 'reservation_id', 
+            FILTER_VALIDATE_INT);
+
+      //Calling the delete reservation function
+      delete_reservation($reservation_id);
+
+      //Redirecting the site back to the list rooms page.
+      header('Location: .?action=make_reservation_form');
+      break;
+
 }

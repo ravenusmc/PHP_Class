@@ -59,26 +59,28 @@
   //This function will get all the room reservations 
   function get_all_reservations() {
     global $db;
-    $query = 'SELECT ro.room_name, re.start_date, re.end_date
+    $query = 'SELECT ro.room_name, re.reservation_id, re.start_date, re.end_date
     FROM rooms ro
-    JOIN room_reservations re on re.room_id = ro.room_id';
+    JOIN room_reservations re on re.room_id = ro.room_id
+    ORDER BY re.start_date ASC';
     $statement = $db->prepare($query);
     $statement->execute();
     $all_reservations = $statement->fetchAll();
-    echo $all_reservations;
     $statement->closeCursor();
     return $all_reservations;
 
   }
 
-      global $db;
-    $query = 'SELECT cr.last_name, cr.first_name, cr.phone, a.street, a.town, 
-    a.state, a.zip, ce.crime_committed, o.last, o.first, o.badge_number
-    FROM criminals cr
-    JOIN address a on a.criminal_id = cr.criminal_id
-    JOIN crimes ce on ce.criminal_id = cr.criminal_id
-    JOIN officers o on ce.officer_id = o.officer_id
-    WHERE cr.criminal_id = :criminal_id';
+  //This function will delete the room reservation 
+  function delete_reservation($reservation_id) {
+    global $db;
+    $query = 'DELETE FROM room_reservations
+              WHERE reservation_id = :reservation_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':reservation_id', $reservation_id);
+    $statement->execute();
+    $statement->closeCursor();
+  }
 
 
 

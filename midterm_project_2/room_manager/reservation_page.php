@@ -1,6 +1,5 @@
 <?php include '../view/header.php'; ?>
 
-
 <main role='main'>
 
   <form action="index.php" method="post">
@@ -158,7 +157,12 @@
 
   </form>
 
-  <hr>
+  <hr> 
+
+  <?php if ($message == 1): ?>
+    <h1>Hello</h1>
+  <?php endif; ?>
+
 
   <section>
 
@@ -176,6 +180,13 @@
           <td><?php echo $reservation['room_name']; ?></td>
           <td><?php echo $reservation['start_date']; ?></td>
           <td><?php echo $reservation['end_date']; ?></td>
+          <td>
+            <form action="index.php" method="post">
+              <input type="hidden" name="action" value="delete_reservation">
+              <input type="hidden" name="reservation_id" value="<?php echo $reservation['reservation_id']; ?>">
+              <input class='input_style' type="submit" value="Delete">
+            </form>
+          </td>
         </tr>
         <?php endforeach; ?>
     </table>
