@@ -90,6 +90,14 @@
       //Checking to see if the date falls on the weekend 
       $weekend_one = (date('N', strtotime($from_date)) >= 6);
       $weekend_two = (date('N', strtotime($to_date)) >= 6);
+      //Checking to ensure that a time does not conflict with another reservation. 
+      $matches = date_check($room_id, $from_date, $to_date);
+      $duplicate_time = count($matches);
+
+      //Keeping for my future reference. 
+      // foreach ($matches as $match){
+      //   echo $match['start_date'];
+      // }
 
       //Error checking 
       if ($datetime1 > $datetime2){
@@ -100,6 +108,8 @@
         $_SESSION['Error'] = "Sorry, that date falls on the weekend!!";
       }else if ($number_of_days > 0){
         $_SESSION['Error'] = "Sorry, the reservation cannot span days";
+      }else if ($duplicate_time > 0){
+        $_SESSION['Error'] = "Sorry, that time is already taken in that room!";
       }
       else {
         //Calling the make_reseravation function 
