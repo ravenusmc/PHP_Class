@@ -1,28 +1,38 @@
 <?php include '../view/header.php'; ?>
+<link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/add_room.css">
+
+<div class='wrapper'>
+
+    <!-- Start of main section -->
+    <main class='main_add_room_page' role='main'>
+
+      <section class='form_section'>
+
+        <h2 class='font'>Add a New Conferance Room</h2>
+
+          <form action="index.php" method="post">
+
+            <input type="hidden" name="action" value="add_room" />
+
+            <!-- The below inputs will deal with getting information for the prisoner -->
+            <input placeholder='Room Name' type='text' name='room_name' required>&nbsp;
 
 
-<!-- Start of main section -->
-<main role='main'>
+            <label>&nbsp;</label>
+            <input type="submit" value="Add Room" />
 
-  <h2>Please Fill Out Form to Add a New Conferance Room</h2>
+          </form>
 
-  <form action="index.php" method="post">
+      </section>
 
-    <input type="hidden" name="action" value="add_room" />
+      <section class='picture_section'>
 
-    <!-- The below inputs will deal with getting information for the prisoner -->
-    <input placeholder='Room Name' type='text' name='room_name' required>&nbsp;
+      </section>
 
+    </main>
+    <!-- End of main section -->
 
-    <label>&nbsp;</label>
-    <input type="submit" value="Add Room" />
-
-  </form>
-
-</main>
-<!-- End of main section -->
-
-
-
+</div>
 
 <?php include '../view/footer.php'; ?>

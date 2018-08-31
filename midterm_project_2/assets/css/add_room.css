@@ -1,0 +1,31 @@
+/* The CSS in this file will cover the add_room.php file */
+
+.main_add_room_page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+}
+
+.form_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.picture_section {
+  background-image: url('../images/rooms.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Media Query Area */
+@media only all and (max-width: 768px) {
+
+  .main_add_room_page {
+    grid-template-columns: 1fr;
+  }
+
+}

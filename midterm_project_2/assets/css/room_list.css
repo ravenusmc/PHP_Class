@@ -1,10 +1,5 @@
 /* This page will have all of the css for the room_list.php page */
 
-.wrapper {
-  background-color: rgb(108,32,22);
-}
-
-
 header {
   color: white;
 }
@@ -26,6 +21,7 @@ header {
 }
 
 table {
+  margin-bottom: 30px;
   border: 2px solid white;
 }
 
@@ -39,11 +35,18 @@ tr td {
   padding: 10px;
 }
 
-
-
 .image_section {
   background-image: url('../../assets/images/face.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Media Query Area */
+@media only all and (max-width: 768px) {
+
+  .main_area {
+    grid-template-columns: 1fr;
+  }
+
 }

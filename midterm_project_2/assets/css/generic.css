@@ -8,6 +8,10 @@
   font-family: 'Shadows Into Light', cursive;
 }
 
+.wrapper {
+  background-color: rgb(108,32,22);
+}
+
 /* CSS for the Footer */ 
 footer {
   display: flex;
@@ -17,6 +21,8 @@ footer {
   height: 150px;
   font-size: 30px;
 }
+
+/* CSS for the input and links */ 
 
 input {
   background-color: white;

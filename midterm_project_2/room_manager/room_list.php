@@ -19,8 +19,8 @@
       <table>
 
         <tr>
-          <th>Room Name</th>
-          <th>Action</th>
+          <th class='font'>Room Name</th>
+          <th class='font'>Action</th>
         </tr>
 
         <?php foreach ($rooms as $room): ?>
@@ -38,8 +38,8 @@
 
       </table>
 
-      <a href="?action=add_room_form">Add Room</a>
-      <a href="?action=make_reservation_form">Make Reservation</a>
+      <a class='font' href="?action=add_room_form">Add Room</a>
+      <a class='font' href="?action=make_reservation_form">Make Reservation</a>
 
     </section>
 
