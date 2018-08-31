@@ -1,0 +1,46 @@
+/* The CSS in this file will cover everything on the reservation page */
+
+.main_reservation_page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+  color: white;
+}
+
+.form_section {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  margin-bottom: 30px;
+  border: 2px solid white;
+}
+
+th {
+  border: 2px solid white;
+  text-align: center;
+}
+
+tr td {
+  border: 2px solid white;
+  padding: 10px;
+}
+
+.image_section {
+  background-image: url('../../assets/images/lego.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Media Query Area */
+@media only all and (max-width: 768px) {
+
+  .main_reservation_page {
+    grid-template-columns: 1fr;
+  }
+
+}
