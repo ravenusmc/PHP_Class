@@ -1,43 +1,57 @@
 <?php include '../view/header.php'; ?>
+<link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/room_list.css">
 
-<header role="banner">
-  <div>
-    <h1>The Rooms</h1>
-  </div>
-</header>
+<div class='wrapper'>
 
-<!-- Start of the main section -->
-<main role="main">
+  <!-- Start of the main section -->
+  <main class='main_area' role="main">
 
-  <!-- This table will display all of the rooms in the database -->
-  <table>
+    <section class='table_section'>
 
-    <tr>
-      <th>Room ID</th>
-      <th>Room Name</th>
-    </tr>
+      <header role="banner">
+        <div>
+          <h1 class='font'>The Rooms</h1>
+        </div>
+      </header>
 
-    <?php foreach ($rooms as $room): ?>
-    <tr>
-      <td><?php echo $room['room_id']; ?></td>
-      <td><?php echo $room['room_name']; ?></td>
-      <td>
-        <form action="index.php" method="post">
-          <input type="hidden" name="action" value="delete_room">
-          <input type="hidden" name="room_id" value="<?php echo $room['room_id']; ?>">
-          <input class='input_style' type="submit" value="Delete">
-        </form>
-      </td>
-    </tr>
-    <?php endforeach; ?>
+      <!-- This table will display all of the rooms in the database -->
+      <table>
 
-  </table>
+        <tr>
+          <th>Room Name</th>
+          <th>Action</th>
+        </tr>
 
-  <a href="?action=add_room_form">Add Room</a>
-  <a href="?action=make_reservation_form">Make Reservation</a>
+        <?php foreach ($rooms as $room): ?>
+        <tr>
+          <td><?php echo $room['room_name']; ?></td>
+          <td>
+            <form action="index.php" method="post">
+              <input type="hidden" name="action" value="delete_room">
+              <input type="hidden" name="room_id" value="<?php echo $room['room_id']; ?>">
+              <input class='input_style' type="submit" value="Delete">
+            </form>
+          </td>
+        </tr>
+        <?php endforeach; ?>
 
-</main>
-<!-- End of the main section -->
+      </table>
+
+      <a href="?action=add_room_form">Add Room</a>
+      <a href="?action=make_reservation_form">Make Reservation</a>
+
+    </section>
+
+    <section class='image_section'>
+
+    </section>
+
+
+  </main>
+  <!-- End of the main section -->
+
+</div>
 
 
 
