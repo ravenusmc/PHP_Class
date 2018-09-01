@@ -20,11 +20,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="room_manager">Home<span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="?action=list_rooms">All Rooms</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="?action=add_room_form">Add Room</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?action=make_reservation_form">Make Reservation</a>
       </li>
     </ul>
   </div>

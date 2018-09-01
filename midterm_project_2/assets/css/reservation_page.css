@@ -3,7 +3,7 @@
 .main_reservation_page {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 80vh;
+  height: 100%;
   color: white;
 }
 
@@ -12,7 +12,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
 }
+
+form {
+  text-align: center;
+}
+
+.date_time_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 
 table {
   margin-bottom: 30px;
