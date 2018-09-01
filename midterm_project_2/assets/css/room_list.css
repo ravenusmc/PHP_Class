@@ -42,6 +42,11 @@ tr td {
   background-repeat: no-repeat;
 }
 
+.link_fix {
+  display: flex;
+  flex-direction: row;
+}
+
 /* Media Query Area */
 @media only all and (max-width: 768px) {
 

@@ -38,8 +38,10 @@
 
       </table>
 
-      <a class='font' href="?action=add_room_form">Add Room</a>
-      <a class='font' href="?action=make_reservation_form">Make Reservation</a>
+      <div class='link_fix'>
+        <a class='font' href="?action=add_room_form">Add Room</a>
+        <a class='font' href="?action=make_reservation_form">Make Reservation</a>
+      </div>
 
     </section>
 
