@@ -1,3 +1,4 @@
+<?php $navbar = False; ?>
 <?php include 'view/header.php'; ?>
 
 <!-- have to include this link to get the css to apply to this file -->

@@ -19,11 +19,13 @@
 
     //This case will bring the user to the page that shows all of the prisoners
     case 'list_rooms':
+      $navbar = True;
       $rooms = get_all_rooms();
       include('room_list.php');
       break;
     //This case will take the user to the add room form 
     case 'add_room_form':
+      $navbar = True;
       include('add_room.php');
       break;
     //This case will actually add the new room to the database 
@@ -52,6 +54,7 @@
       break;
     //This case will take the user to the reservation page
     case 'make_reservation_form':
+      $navbar = True;
       $rooms = get_all_rooms();
       $all_reservations = get_all_reservations();
       include('reservation_page.php');

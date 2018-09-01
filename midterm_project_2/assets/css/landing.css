@@ -18,8 +18,12 @@ body, html {
 .landing_div {
   background-color: rgba(0,0,0,0.8);
   color: white;
-  padding: 10px;
+  padding: 25px;
   border-radius: 12px
+}
+
+div h1 {
+  margin-bottom: 20px;
 }
 
 div h1 a {

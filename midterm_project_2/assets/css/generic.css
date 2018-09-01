@@ -12,6 +12,13 @@
   background-color: rgb(108,32,22);
 }
 
+/* Navbar color */
+
+.bg-company-red {
+  background-color: rgb(108,32,22);
+  border-bottom: 2px solid black;
+}
+
 
 /* CSS for the Footer */ 
 footer {
