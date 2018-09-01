@@ -3,8 +3,6 @@ Create a conference room scheduler PHP web application.
 The application should allow a user to maintain a list of conference rooms.
 
 
-
-
 Only allow reservations on the same day. Reservations cannot span days.
 
 

@@ -59,7 +59,7 @@
   //This function will get all the room reservations 
   function get_all_reservations() {
     global $db;
-    $query = 'SELECT ro.room_name, re.reservation_id, re.start_date, re.end_date
+    $query = 'SELECT ro.room_name, re.reservation_id, start_date, end_date
     FROM rooms ro
     JOIN room_reservations re on re.room_id = ro.room_id
     ORDER BY re.start_date ASC';
