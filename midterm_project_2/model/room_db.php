@@ -87,7 +87,11 @@
     $query = 'SELECT * FROM room_reservations
     WHERE room_id = :room_id AND 
     start_date <= :from_date AND 
-    end_date >= :to_date';
+    end_date >= :to_date OR 
+    :from_date >= start_date AND 
+    :from_date <= end_date OR
+    :to_date >= start_date AND 
+    :to_date <= end_date';
     $statement = $db->prepare($query);
     $statement->bindValue(':room_id', $room_id);
     $statement->bindValue(':from_date', $from_date);

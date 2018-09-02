@@ -114,7 +114,7 @@
 
           <select name='month_to'>
             <option value='01'>Jan</option>
-            <option value='02'>Fed</option>
+            <option value='02'>Feb</option>
             <option value='03'>Mar</option>
             <option value='04'>Apr</option>
             <option value='05'>May</option>
