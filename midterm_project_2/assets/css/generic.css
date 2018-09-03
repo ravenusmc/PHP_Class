@@ -19,6 +19,11 @@
   border-bottom: 2px solid black;
 }
 
+.nav_bar_link:hover {
+  background-color: rgb(108,32,22);
+  border-radius: 10px;
+}
+
 
 /* CSS for the Footer */ 
 footer {
@@ -31,6 +36,13 @@ footer {
   font-size: 30px;
 }
 
+.footer_anchor {
+  background-color: blue;
+}
+
+.icon-cog {
+  color: rgb(108,32,22);
+}
 
 
 /* CSS for the input and links */ 
