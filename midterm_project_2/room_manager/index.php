@@ -104,9 +104,9 @@
 
       //Error checking 
       if ($datetime1 > $datetime2){
-        echo 'The second date is earlier than the first date!';
+        $_SESSION['Error'] = "The second date is earlier than the first date!";
       }else if ($datetime1 == $datetime2){
-        echo 'The dates are the same!!';
+        $_SESSION['Error'] = "The dates are the same!!";
       }else if ($weekend_one == 1 or $weekend_two == 1){
         $_SESSION['Error'] = "Sorry, that date falls on the weekend!!";
       }else if ($number_of_days > 0){
@@ -123,6 +123,7 @@
       if( isset($_SESSION['Error']) ) {
               echo "<h1>" . $_SESSION['Error'] . "</h1>";
               unset($_SESSION['Error']);
+              echo '<h2>Please hit the back button!</h2>';
       }
 
       header('Location: .?action=make_reservation_form');
