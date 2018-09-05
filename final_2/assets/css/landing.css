@@ -1,0 +1,12 @@
+/* This file will cover all of the CSS for the landing page */
+.landing_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
