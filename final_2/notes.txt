@@ -36,8 +36,14 @@ NOTES:
 Authentication guide:
 https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
 
-YouTube Video on Authentication:
+YouTube Videos on Authentication:
 https://www.youtube.com/watch?v=b-2_Y53CTYA
+https://www.youtube.com/watch?v=sRuRRdJCB8E
+
+https://www.youtube.com/watch?v=hQVHZXydZl0&list=PL9mwDhhLGZilsMTm1POos9aXjvorie3Me
+
+Treehouse
+https://teamtreehouse.com/library/php-user-authentication
 
 On Sessions:
 https://www.w3schools.com/php/php_sessions.asp
