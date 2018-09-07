@@ -1,7 +1,7 @@
 <?php
 
   //Pulling in the databases
-  // require('../model/database.php');
+  require('../model/database.php');
   // require('../model/room_db.php');
 
   //Setting a default action 

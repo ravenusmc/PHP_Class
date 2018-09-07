@@ -27,9 +27,8 @@
     $valid_password = password_verify($password, $user_table_password);
 
     if ($valid_password) {
-      $_session["username"] = $username;
+      $_SESSION["username"] = $username;
       header("location: comments/index.php");
-      // header("location: login_success.php");
       exit();
     }else {
       $message = '<label>Password is Wrong!</label>';
@@ -94,6 +93,7 @@
     </form>
     <a href="signup.php">Sign Up</a>
     <a href="logout.php">LogOut</a>
+    <a href="comments">Go In</a>
 
   </div>
 </main>
