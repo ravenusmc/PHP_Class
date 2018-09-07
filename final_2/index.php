@@ -14,24 +14,44 @@
     $username = filter_input(INPUT_POST, 'username');
     $password = filter_input(INPUT_POST, 'password');
 
-    
-
-    $query = "SELECT * FROM users WHERE 
-            userName = :username AND password = :password";
+    //Getting the password from the database 
+    $query = "SELECT * FROM users 
+            WHERE userName = :username";
     $statement = $db->prepare($query);
     $statement->bindValue(':username', $username);
-    $statement->bindValue(':password', $password);
     $statement->execute();
-    $count = $statement->rowCount();
-    if ($count > 0){
+    $user = $statement->fetch();
+    //Setting the user_table variable to store the passwrod for the verify function
+    $user_table_password = $user['password'];
+    //Verifing the password from the database.
+    $valid_password = password_verify($password, $user_table_password);
+
+    if ($valid_password) {
       $_session["username"] = $username;
-      // include 'login_success.php';
-      // header("Location: /url/to/the/other/page");
-      header("location: login_success.php");
+      header("location: comments/index.php");
+      // header("location: login_success.php");
       exit();
     }else {
-      $message = '<label>Username or Password is Wrong!</label>';
+      $message = '<label>Password is Wrong!</label>';
     }
+
+
+    // $query = "SELECT * FROM users WHERE 
+    //         userName = :username AND password = :password";
+    // $statement = $db->prepare($query);
+    // $statement->bindValue(':username', $username);
+    // $statement->bindValue(':password', $password);
+    // $statement->execute();
+    // $count = $statement->rowCount();
+    // if ($count > 0){
+    //   $_session["username"] = $username;
+    //   // include 'login_success.php';
+    //   // header("Location: /url/to/the/other/page");
+    //   header("location: login_success.php");
+    //   exit();
+    // }else {
+    //   $message = '<label>Username or Password is Wrong!</label>';
+    // }
 
 
     // if (empty($_POST["username"]) || empty($_POST["password"])){
