@@ -44,6 +44,53 @@
     return $comments; 
   }
 
+  //This function will create a new reply 
+  function create_reply($reply, $user_id, $comment_id, $today){
+    global $db;
+    $query = 'INSERT INTO replies
+              (reply, user_id, comment_id, created)
+            VALUES
+              (:reply, :user_id, :comment_id, :created)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':reply', $reply);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':comment_id', $comment_id);
+    $statement->bindValue(':created', $today);
+    $statement->execute();
+    $statement->closeCursor();
+  }
+
+  //This function will get one comment 
+  function get_single_comment($comment_id) {
+    global $db;
+    $query = 'SELECT * FROM comments 
+              WHERE comment_id = :comment_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':comment_id', $comment_id);
+    $statement->execute();
+    $comment = $statement->fetch();
+    $statement->closeCursor();
+    return $comment;
+  }
+
+  //This function will get comments and replies 
+  function get_both_comments_replies($comment_id) {
+    global $db;
+    $query = 'SELECT c.comment, c.created, r.reply, r.created, c.comment_id
+              FROM comments c 
+              JOIN replies r on r.comment_id = c.comment_id
+              WHERE c.comment_id = :comment_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':comment_id', $comment_id);
+    $statement->execute();
+    $comments = $statement->fetchAll();
+    $statement->closeCursor();
+    return $comments;
+
+  }
+
+  
+
 
 
 ?>

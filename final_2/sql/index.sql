@@ -29,3 +29,8 @@ CREATE TABLE replies (
 
 
 --Use NOW() to insert for current date time. 
+
+SELECT c.comment, c.created, r.reply, r.created, c.comment_id
+FROM comments c 
+JOIN replies r on r.comment_id = c.comment_id
+WHERE c.comment_id = 1;

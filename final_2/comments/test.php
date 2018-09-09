@@ -1,3 +1,0 @@
-<h1>HIHIHI</h1>
-
-<p>MIKE MIKE MIKE </p>
