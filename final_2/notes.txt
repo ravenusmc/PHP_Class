@@ -5,15 +5,13 @@ Create database tables to store all information for this application; user login
 Insert the following user logins:
 userid = user1, password = pwd1
 userid = user2, password = pwd2
-Create the necessary pages, forms, input elements, links, styles, etc. to allow users to login, and to view, add and delete comments and replies.
-Validate the login against the user login table.
 
-Display a login button or link if a user has not logged in.
-Display a logout button or link if a user has logged in.
+Create the necessary pages, forms, input elements, links, styles, etc. to allow users to login, and to view, add and delete comments and replies.
+
 Display the userid of the user that has logged in.
 
 Once a user has logged in, allow them to add and delete comments and replies until they logout or close their browser.
-Any visitor can view all comments and replies. Login is not required to view comments and replies.
+
 Visitors that do not login can only view comments and replies; and cannot add or delete comments or replies.
 
 Login is required to add or delete comments and replies.
@@ -30,6 +28,15 @@ BONUS:
 Display replies indented under their associated comment.
 Display the total number of comments.
 Display the total number of replies for each comment.
+
+
+######### DONE DONE DONE ###################
+
+Any visitor can view all comments and replies. Login is not required to view comments and replies.
+Validate the login against the user login table.
+Display a login button or link if a user has not logged in.
+Display a logout button or link if a user has logged in.
+
 
 NOTES: 
 
