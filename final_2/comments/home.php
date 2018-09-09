@@ -1,15 +1,5 @@
 <?php
   session_start();
-
-  $name = $_SESSION["username"];
-
-  echo "Your name is: " . $_SESSION["username"];
-
-  // if (isset($name)) {
-  //  echo 'Session';
-  // }else{
-  //  echo 'No Session';
-  // }
  
 ?>
 <h1>Hi</h1>
