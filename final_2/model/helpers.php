@@ -110,4 +110,22 @@
     $statement->closeCursor();
   }
 
+  //This function will update a comment 
+  function update_comment($comment_id, $comment, $user_id, $today){
+    global $db;
+    $query = 'UPDATE comments
+    SET comment_id = :comment_id,
+        comment = :comment,
+        user_id = :user_id,
+        created = :created
+    WHERE comment_id = :comment_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':comment_id', $comment_id);
+    $statement->bindValue(':comment', $comment);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':created', $today);
+    $statement->execute();
+    $statement->closeCursor();
+  }
+
 ?>

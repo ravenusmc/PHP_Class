@@ -73,7 +73,7 @@
 
       header('Location: .?action=home');
       break;
-    //This case will allow the user to delete a comment
+    //This case will allow the user to delete a reply
     case 'delete_reply':
       //Getting the reply id when the user pushes the delete button
       $reply_id = filter_input(INPUT_POST, 'reply_id');
@@ -82,6 +82,33 @@
 
       header('Location: .?action=home');
       break;
+    //This case will allow the user to update a comment form
+    case 'update_comment_form':
+      $comment_id  = filter_input(INPUT_POST, 'comment_id');
+      // $user_id = filter_input(INPUT_POST, 'user_id');
+      // $comment_mod = filter_input(INPUT_POST, 'comment');
+
+      //Getting information on current comment
+      $comment = get_single_comment($comment_id);
+
+      include('update_comment_form.php');
+      break;
+    //This case will actually update the comment
+    case 'update_comment':
+      $comment_id  = filter_input(INPUT_POST, 'comment_id');
+      $user_id = filter_input(INPUT_POST, 'user_id');
+      $comment = filter_input(INPUT_POST, 'comment');
+
+      //Getting the current time to insert into the database.
+      date_default_timezone_set('US/Eastern');
+      $today = date("m-d-y G:i:s");
+
+      update_comment($comment_id, $comment, $user_id, $today);
+
+      header('Location: .?action=home');
+      break;
+
+
   }
 
 ?>
