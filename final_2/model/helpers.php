@@ -76,7 +76,7 @@
   //This function will get comments and replies 
   function get_both_comments_replies($comment_id) {
     global $db;
-    $query = 'SELECT c.comment, c.created, r.reply, r.created, c.comment_id
+    $query = 'SELECT c.comment, c.created, r.reply, r.created, c.comment_id, r.reply_id
               FROM comments c 
               JOIN replies r on r.comment_id = c.comment_id
               WHERE c.comment_id = :comment_id';
@@ -86,11 +86,17 @@
     $comments = $statement->fetchAll();
     $statement->closeCursor();
     return $comments;
-
   }
 
-  
-
-
+  //This function will delete a comment 
+  function delete_comment($comment_id) {
+    global $db;
+    $query = 'DELETE FROM comments
+              WHERE comment_id = :comment_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':comment_id', $comment_id);
+    $statement->execute();
+    $statement->closeCursor();
+  }
 
 ?>

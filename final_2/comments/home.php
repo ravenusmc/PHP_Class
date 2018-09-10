@@ -6,7 +6,7 @@
  
 ?>
 
-<h1>Hi</h1>
+<h1>Hi <?php echo $name; ?>!</h1>
 <a href="logout.php">LogOut</a>
 
 
@@ -23,6 +23,13 @@
     <input type="submit" value="See Replies" />
 
   </form>
+  <!-- Form action to delete comment -->
+  <form action="index.php" method="post">
+    <input type="hidden" name="action" value="delete_comment" />
+    <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+    <input type="submit" value="Delete Comment" />
+  </form>
+  <!-- End of form to delete comment -->
 
   <!-- This form will allow the user to add a reply -->
   <form action="index.php" method="post">

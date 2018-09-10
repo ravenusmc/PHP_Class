@@ -64,6 +64,15 @@
 
       include('see_comment_page.php');
       break;
+    //This case will allow the user to delete a comment 
+    case 'delete_comment':
+      //Getting comment id when the user pushes the delete button
+      $comment_id = filter_input(INPUT_POST, 'comment_id');
+
+      delete_comment($comment_id);
+
+      header('Location: .?action=home');
+      break;
   }
 
 ?>
