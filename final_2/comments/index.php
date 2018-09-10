@@ -107,8 +107,30 @@
 
       header('Location: .?action=home');
       break;
+    //This case will bring the user to the page to update the form 
+    case 'update_reply_form':
+      $reply_id = filter_input(INPUT_POST, 'reply_id');
 
+      //Getting information on current reply
+      $reply = get_single_reply($reply_id);
 
+      include('update_reply_form.php');
+      break;
+    //This case will actually update the reply 
+    case 'update_reply':
+      $reply_id = filter_input(INPUT_POST, 'reply_id');
+      $reply = filter_input(INPUT_POST, 'reply');
+      $user_id = filter_input(INPUT_POST, 'user_id');
+      $comment_id = filter_input(INPUT_POST, 'comment_id');
+
+      //Getting the current time to insert into the database.
+      date_default_timezone_set('US/Eastern');
+      $today = date("m-d-y G:i:s");
+
+      update_reply($reply_id, $reply, $user_id, $comment_id, $today);
+
+      header('Location: .?action=home');
+      break;
   }
 
 ?>

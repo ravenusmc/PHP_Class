@@ -3,6 +3,7 @@
   //This variable will be a flag to verify if the user is currently in a session
   //or just browsing. 
   $name = $_SESSION["username"];
+  $id = $_SESSION["user_id"];
  
 ?>
 <h1>Comment: <?php echo $comment['comment']; ?></h1>
@@ -44,6 +45,16 @@
 
     </form>
     <!-- End of form to delete comment -->
+
+    <!-- Form to edit a comment -->
+    <form action="index.php" method="post">
+
+      <input type="hidden" name="action" value="update_reply_form" />
+      <input type='hidden' name="reply_id" value='<?php echo $comment['reply_id']; ?>'>
+      <input type="submit" value="Update Reply" />
+
+    </form>
+    <!-- End of form to edit comment -->
 
   <?php endif; ?>
 

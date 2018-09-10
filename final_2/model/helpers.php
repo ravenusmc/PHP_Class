@@ -73,6 +73,19 @@
     return $comment;
   }
 
+  //This function will get one reply 
+  function get_single_reply($reply_id){
+    global $db;
+    $query = 'SELECT * FROM replies 
+              WHERE reply_id = :reply_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':reply_id', $reply_id);
+    $statement->execute();
+    $reply = $statement->fetch();
+    $statement->closeCursor();
+    return $reply;
+  }
+
   //This function will get comments and replies 
   function get_both_comments_replies($comment_id) {
     global $db;
@@ -123,6 +136,26 @@
     $statement->bindValue(':comment_id', $comment_id);
     $statement->bindValue(':comment', $comment);
     $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':created', $today);
+    $statement->execute();
+    $statement->closeCursor();
+  }
+
+  //This function will update a reply 
+  function update_reply($reply_id, $reply, $user_id, $comment_id, $today){
+    global $db;
+    $query = 'UPDATE replies
+    SET reply_id = :reply_id,
+        reply = :reply,
+        user_id = :user_id,
+        comment_id = :comment_id, 
+        created = :created
+    WHERE reply_id = :reply_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':reply_id', $reply_id);
+    $statement->bindValue(':reply', $reply);
+    $statement->bindValue(':user_id', $user_id);
+    $statement->bindValue(':comment_id', $comment_id);
     $statement->bindValue(':created', $today);
     $statement->execute();
     $statement->closeCursor();
