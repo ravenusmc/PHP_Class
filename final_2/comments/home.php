@@ -14,8 +14,9 @@
 <h1>Comments!</h1>
 <?php foreach ($comments as $comment): ?>
 
-
+  <h3><?php echo $comment['userName']; ?> Says:</h3>
   <p><?php echo $comment['comment']; ?></p>
+  <p><?php echo $comment['created']; ?></p>
   <form action="index.php" method="post">
 
     <input type="hidden" name="action" value="comment_page" />

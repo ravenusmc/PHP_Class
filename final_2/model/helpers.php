@@ -36,7 +36,9 @@
   //This function will get all comments
   function get_all_comments() {
     global $db;
-    $query = "SELECT * FROM comments";
+    $query = "SELECT c.comment_id, c.comment, c.user_id, c.created, u.userName FROM comments c
+              JOIN users u on u.user_id = c.user_id
+              ORDER BY created DESC";
     $statement = $db->prepare($query);
     $statement->execute();
     $comments = $statement->fetchAll();
