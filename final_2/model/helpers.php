@@ -99,4 +99,15 @@
     $statement->closeCursor();
   }
 
+  //This function will delete a reply 
+  function delete_reply($reply_id){
+    global $db;
+    $query = 'DELETE FROM replies
+              WHERE reply_id = :reply_id';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':reply_id', $reply_id);
+    $statement->execute();
+    $statement->closeCursor();
+  }
+
 ?>

@@ -73,6 +73,15 @@
 
       header('Location: .?action=home');
       break;
+    //This case will allow the user to delete a comment
+    case 'delete_reply':
+      //Getting the reply id when the user pushes the delete button
+      $reply_id = filter_input(INPUT_POST, 'reply_id');
+
+      delete_reply($reply_id);
+
+      header('Location: .?action=home');
+      break;
   }
 
 ?>
