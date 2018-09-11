@@ -1,12 +1,41 @@
 /* This file will cover all of the CSS for the landing page */
-.landing_main {
+body, html {
+    height: 100%;
+}
+
+.wrapper {
+  background-image: url('../../assets/image/cover_image.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.landing_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  color: white;
+  padding: 50px;
+}
+
 form {
   display: flex;
   flex-direction: column;
 }
+
+.anchor_div a {
+  text-decoration: none;
+}
+
+.anchor_div a:hover {
+  text-decoration: none;
+  color: white;
+};

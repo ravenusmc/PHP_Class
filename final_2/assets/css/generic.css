@@ -1,1 +1,8 @@
 /* This file will deal with all the CSS that will be used throughout the project. */
+.center {
+  text-align: center;
+}
+
+.anchor_div {
+  text-align: center;
+}

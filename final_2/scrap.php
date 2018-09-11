@@ -14,3 +14,9 @@
 
 
 ?>
+
+<!--       <form method="post">
+        <input placeholder='username' type="text" name='username' required>
+        <input placeholder='password' type="text" name='password' required>
+        <button type="submit">Login</button>
+      </form> -->
