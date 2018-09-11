@@ -96,6 +96,7 @@
           echo $message;
         }
       ?>
+
       <form method="post">
         <div class="form-group">
           <label for="exampleInputEmail1">Username</label>
@@ -107,6 +108,7 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
       <div class='anchor_div'>
         <a href="signup.php">Sign Up</a>
         <a href="comments">Go In</a>

@@ -1,0 +1,32 @@
+/* This page deals with all of the CSS for signup.php. */
+body, html {
+    height: 100%;
+}
+
+.wrapper {
+  background-image: url('../../assets/image/signup.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  color: white;
+  padding: 50px;
+}
+
+.login_anchor a:hover {
+  text-decoration: none;
+  color: white;
+}

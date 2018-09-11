@@ -15,6 +15,9 @@
     $username = filter_input(INPUT_POST, 'username');
     $password = filter_input(INPUT_POST, 'password');
     $password2 = filter_input(INPUT_POST, 'password2');
+
+    echo $username;
+
     //Hashing the password 
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
@@ -41,8 +44,6 @@
 
     }
 
-
-
     // if (empty($_POST["username"]) || empty($_POST["password"])){
     //   $message = '<label>All Fields are required</label>';
     // }else {
@@ -63,31 +64,55 @@
   }
 
 ?>
+<?php include 'view/header.php'; ?>
+
 <!-- have to include this link to get the css to apply to this file -->
 <link rel="stylesheet" type="text/css" href="./assets/css/generic.css">
-<link rel="stylesheet" type="text/css" href="./assets/css/landing.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/signup.css">
 
-<!-- Start of the main section -->
-<main class='landing_main' role='main'>
-  <div class='landing_div'>
-    <h2>Sign Up</h2>
-    <?php 
-      if (isset($message)){
-        echo $message;
-      }
-    ?>
-    <form method="post">
-      <input placeholder='Username' type="text" name='username' required>
-      <input class="<?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>" placeholder='Password' type="text" name='password' required>
-      <input placeholder='Confirm Password' type="text" name='password2' required>
-      <span><?php echo $confirm_password_err; ?></span>
-      <input type="submit" name="login" value="Submit">
-    </form>
-    <a href="index.php">Login Page</a>
+<div class='wrapper'>
 
-  </div>
-</main>
-<!-- End of the main section -->
+  <!-- Start of the main section -->
+  <main class='landing_main' role='main'>
+
+    <div class='landing_div'>
+      <h4 class='center'>Sign Up for Comments</h4>
+      <?php 
+        if (isset($message)){
+          echo $message;
+        }
+      ?>
+
+      <!-- Start of Sign up form -->
+      <form method="post">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username</label>
+          <input type="text" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password Confirm</label>
+          <input type="password" name='password2' class="form-control" id="exampleInputPassword1" placeholder="Password Confirm">
+        </div>
+        <div class='center'>
+          <button type="submit" name="login" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+      <!-- End of Sign up form -->
+
+      <div class='login_anchor center'>
+        <a href="index.php">Login Page</a>
+      </div>
+
+    </div>
+
+  </main>
+  <!-- End of the main section -->
+
+</div>
 
 
 
