@@ -28,3 +28,5 @@
       <span><?php echo $confirm_password_err; ?></span>
       <input type="submit" name="login" value="Submit">
     </form> -->
+
+<!-- <a href="logout.php">LogOut</a> -->

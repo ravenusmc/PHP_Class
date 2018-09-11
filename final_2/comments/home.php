@@ -4,53 +4,68 @@
   //or just browsing. 
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];
+
+  $navbar = True;
  
 ?>
+<?php include '../view/header.php'; ?>
+<link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/home.css">
 
-<h1>Hi <?php echo $name; ?>!</h1>
-<a href="logout.php">LogOut</a>
+<div class='center'>
+  <h1>Welcome to Comments <?php echo $name; ?>!</h1>
+  <h3>Write what's on your mind. See what others think.</h3>
+  <h4>
+    <?php if (isset($name)): ?>
+      Join the conversation <?php echo $name; ?>!
+      <a class='add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
+    <?php else: ?>
+      <p>Sign Up to join the Conversation!</p>
+    <?php endif; ?>
+  </h4>
+</div>
 
-
-<h1>Comments!</h1>
 <?php foreach ($comments as $comment): ?>
 
-  <h3><?php echo $comment['userName']; ?> Says:</h3>
-  <p><?php echo $comment['comment']; ?></p>
-  <p><?php echo $comment['created']; ?></p>
-  <form action="index.php" method="post">
+  <div class='comment_box'>
 
-    <input type="hidden" name="action" value="comment_page" />
-    <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-    <input type="submit" value="See Replies" />
+    <h3><?php echo $comment['userName']; ?> Says:</h3>
+    <p><?php echo $comment['comment']; ?></p>
+    <p><?php echo $comment['created']; ?></p>
 
-  </form>
-  <?php if (isset($name)): ?>
+    <div class='button_div'>
 
-    <!-- Form action to delete comment -->
-    <form action="index.php" method="post">
-      <input type="hidden" name="action" value="delete_comment" />
-      <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-      <input type="submit" value="Delete Comment" />
-    </form>
-    <!-- End of form to delete comment -->
+      <form action="index.php" method="post">
+        <input class='see_form' type="hidden" name="action" value="comment_page" />
+        <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+        <input class='see_form' type="submit" value="See Replies" />
+      </form>
 
-    <!-- Form action to update comment -->
-    <form action="index.php" method="post">
-      <input type="hidden" name="action" value="update_comment_form" />
-      <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
-      <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-      <input type="submit" value="Update Comment" />
-    </form>
-    <!-- End of form to updatecomment -->
+      <!-- This conditional statement will only allow logged in users to delete/update comments -->
+      <?php if (isset($name)): ?>
 
-  <?php endif; ?>
+        <!-- Form action to delete comment -->
+        <form action="index.php" method="post">
+          <input class='middle_form' type="hidden" name="action" value="delete_comment" />
+          <input class='middle_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+          <input class='middle_form' type="submit" value="Delete Comment" />
+        </form>
+        <!-- End of form to delete comment -->
 
-  <hr>
+        <!-- Form action to update comment -->
+        <form action="index.php" method="post">
+          <input class='see_form' type="hidden" name="action" value="update_comment_form" />
+          <input class='see_form' type='hidden' name="user_id" value='<?php echo $id; ?>'>
+          <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+          <input class='see_form' type="submit" value="Update Comment" />
+        </form>
+        <!-- End of form to updatecomment -->
+
+      </div>
+
+    <?php endif; ?>
+    <!-- End of conditional statement -->
+
+  </div>
 
 <?php endforeach; ?>
-
-<br>
-
-<?php if (isset($name)): ?>
-  <a href="?action=add_comment_form">Add Comment</a>
-<?php endif; ?>

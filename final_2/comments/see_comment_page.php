@@ -4,8 +4,10 @@
   //or just browsing. 
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];
+  $navbar = True;
  
 ?>
+<?php include '../view/header.php'; ?>
 <h1>Comment: <?php echo $comment['comment']; ?></h1>
 
 <h2>Replies:</h2>

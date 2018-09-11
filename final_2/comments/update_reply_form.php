@@ -4,8 +4,10 @@
   //or just browsing. 
   $name = $_SESSION["username"];
   $id = $_SESSION["user_id"];
+  $navbar = True;
  
 ?>
+<?php include '../view/header.php'; ?>
 <h1>Update Reply</h1>
 
 <form action="index.php" method="post">

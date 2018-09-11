@@ -1,0 +1,33 @@
+/* This file deals with all the CSS for the home.php file in the comments folder */
+
+.comment_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button_div {
+  display: flex;
+  flex-direction: row;
+}
+
+.add_comment_anchor:hover {
+  text-decoration: none;
+  color: #EB650D;
+}
+
+.see_form {
+  background-color: #149AF2;
+  color: #333;
+  border-color: #149AF2;
+}
+
+.middle_form {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #EB650D;
+  color: #333;
+  border-color: #EB650D;
+}
