@@ -1,0 +1,33 @@
+/* This page deals with all of the CSS for the update comment page */
+
+body, html {
+    height: 100%; 
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #149AF2;
+}
+
+.middle_form {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #EB650D;
+  color: #333;
+  border-color: #EB650D;
+}
+
+.middle_form:hover {
+  color: white;
+}
+

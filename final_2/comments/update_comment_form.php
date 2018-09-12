@@ -8,19 +8,30 @@
  
 ?>
 <?php include '../view/header.php'; ?>
-<h1>Update</h1>
+<link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/update_comment.css">
 
-<form action="index.php" method="post">
+<div class='wrapper'>
 
-  <input type="hidden" name="action" value="update_comment" />
+  <main>
 
-  <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
-  <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-  <input name="comment" value='<?php echo $comment['comment']; ?>'>
+    <h1 class='center'>Update The Comment</h1>
 
-<!--   <textarea placeholder='Test' type='textarea' rows="4" cols="50" name='comment' required>&nbsp;
-  </textarea> -->
+    <form action="index.php" method="post">
 
-  <input type="submit" value="Update Comment" />
+      <input type="hidden" name="action" value="update_comment" />
 
-</form>
+      <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
+      <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+      <input size="35" name="comment" value='<?php echo $comment['comment']; ?>'>
+
+    <!--   <textarea placeholder='Test' type='textarea' rows="4" cols="50" name='comment' required>&nbsp;
+      </textarea> -->
+
+      <input class='middle_form' type="submit" value="Update Comment" />
+
+    </form>
+
+  </main>
+
+</div>

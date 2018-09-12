@@ -8,20 +8,30 @@
  
 ?>
 <?php include '../view/header.php'; ?>
-<h1>Update Reply</h1>
+<link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/update_comment.css">
 
-<form action="index.php" method="post">
+<div class='wrapper'>
 
-  <input type="hidden" name="action" value="update_reply" />
+  <main>
 
-  <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
-  <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
-  <input type='hidden' name="comment_id" value='<?php echo $reply['comment_id']; ?>'>
-  <input name="reply" value='<?php echo $reply['reply']; ?>'>
+    <h1>Update Reply</h1>
 
-<!--   <textarea placeholder='Test' type='textarea' rows="4" cols="50" name='comment' required>&nbsp;
-  </textarea> -->
+    <form action="index.php" method="post">
 
-  <input type="submit" value="Update Reply" />
+      <input type="hidden" name="action" value="update_reply" />
 
-</form>
+      <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
+      <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
+      <input type='hidden' name="comment_id" value='<?php echo $reply['comment_id']; ?>'>
+      <input size="35" name="reply" value='<?php echo $reply['reply']; ?>'>
+
+    <!--   <textarea placeholder='Test' type='textarea' rows="4" cols="50" name='comment' required>&nbsp;
+      </textarea> -->
+
+      <input class='middle_form' type="submit" value="Update Reply" />
+
+    </form>
+  </main>
+
+</div>
