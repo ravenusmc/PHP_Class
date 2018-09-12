@@ -8,29 +8,39 @@
  
 ?>
 <?php include '../view/header.php'; ?>
+<link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/update_comment.css">
 
-<h1>Add Comment</h1>
+<div class='wrapper'>
 
-<!-- Start of main section -->
-<main>
+  <!-- Start of main section -->
+  <main>
 
-  <section>
+    <section>
 
-    <!-- Start of form -->
-    <form action="index.php" method="post">
+      <h1 class='center'>Add Comment</h1>
 
-      <input type="hidden" name="action" value="add_comment" />
-      <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
+      <!-- Start of form -->
+      <form action="index.php" method="post">
 
-      <textarea placeholder='Comment' type='textarea' rows="4" cols="50" name='comment' required>&nbsp;
-      </textarea>
+        <input type="hidden" name="action" value="add_comment" />
+        <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
 
-      <input type="submit" value="Add Comment" />
+        <textarea placeholder='Comment' type='textarea' rows="4" cols="50" name='comment' required>&nbsp;
+        </textarea>
 
-    </form>
-    <!-- End of form -->
+        <br>
 
-  </section>
+        <div class='input_align'>
+          <input class='center middle_form' type="submit" value="Add Comment" />
+        </div>
 
-</main>
-<!-- End of Main section -->
+      </form>
+      <!-- End of form -->
+
+    </section>
+
+  </main>
+  <!-- End of Main section -->
+
+</div>

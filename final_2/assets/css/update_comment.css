@@ -31,3 +31,10 @@ main {
   color: white;
 }
 
+.input_align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

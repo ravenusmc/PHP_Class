@@ -8,59 +8,78 @@
  
 ?>
 <?php include '../view/header.php'; ?>
-<h1>Comment: <?php echo $comment['comment']; ?></h1>
+<link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/see_comment.css">
 
-<h2>Replies:</h2>
+<div class='wrapper'>
 
-<?php if (isset($name)): ?>
+  <div class='top_div'>
 
-  <!-- This form will allow the user to add a reply -->
-  <form action="index.php" method="post">
+    <h1>Comment: <?php echo $comment['comment']; ?></h1>
 
-    <input type="hidden" name="action" value="add_reply" />
-    <input type='hidden' name="user_id" value='<?php echo $comment['user_id']; ?>'>
-    <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+    <h2>Add a Reply:</h2>
 
-    <textarea placeholder='Reply' type='textarea' rows="4" cols="50" name='reply' required>&nbsp;
-    </textarea>
+    <?php if (isset($name)): ?>
 
-    <input type="submit" value="Add Reply" />
+      <!-- This form will allow the user to add a reply -->
+      <form action="index.php" method="post">
 
-  </form>
-  <!-- End of reply form -->
+        <input type="hidden" name="action" value="add_reply" />
+        <input type='hidden' name="user_id" value='<?php echo $comment['user_id']; ?>'>
+        <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
 
-<?php endif; ?>
+        <textarea placeholder='Reply' type='textarea' rows="4" cols="50" name='reply' required>&nbsp;
+        </textarea>
 
-<?php foreach ($comments as $comment): ?>
+        <br>
 
-  <p><?php echo $comment['reply']; ?></p>
-  <p><?php echo $comment['created']; ?></p>
+        <div class='input_align'>
+          <input class='see_form' type="submit" value="Add Reply" />
+        </div>
 
-  <?php if (isset($name)): ?>
+      </form>
+      <!-- End of reply form -->
 
-    <!-- Form to delete a comment -->
-    <form action="index.php" method="post">
+    <?php endif; ?>
 
-      <input type="hidden" name="action" value="delete_reply" />
-      <input type='hidden' name="reply_id" value='<?php echo $comment['reply_id']; ?>'>
-      <input type="submit" value="Delete Reply" />
+  </div>
 
-    </form>
-    <!-- End of form to delete comment -->
+  <h2>Replies:</h2>
 
-    <!-- Form to edit a comment -->
-    <form action="index.php" method="post">
+  <?php foreach ($comments as $comment): ?>
 
-      <input type="hidden" name="action" value="update_reply_form" />
-      <input type='hidden' name="reply_id" value='<?php echo $comment['reply_id']; ?>'>
-      <input type="submit" value="Update Reply" />
+    <p><?php echo $comment['reply']; ?></p>
+    <p><?php echo $comment['created']; ?></p>
 
-    </form>
-    <!-- End of form to edit comment -->
+    <?php if (isset($name)): ?>
 
-  <?php endif; ?>
+    <div class='button_fix'>
 
-  <hr>
+      <!-- Form to delete a comment -->
+      <form action="index.php" method="post">
 
-<?php endforeach; ?>
+        <input type="hidden" name="action" value="delete_reply" />
+        <input type='hidden' name="reply_id" value='<?php echo $comment['reply_id']; ?>'>
+        <input class='middle_form' type="submit" value="Delete Reply" />
+
+      </form>
+      <!-- End of form to delete comment -->
+
+      <!-- Form to edit a comment -->
+      <form action="index.php" method="post">
+
+        <input type="hidden" name="action" value="update_reply_form" />
+        <input type='hidden' name="reply_id" value='<?php echo $comment['reply_id']; ?>'>
+        <input class='see_form' type="submit" value="Update Reply" />
+
+      </form>
+      <!-- End of form to edit comment -->
+
+    </div>
+
+    <?php endif; ?>
+
+    <hr>
+
+  <?php endforeach; ?>
 

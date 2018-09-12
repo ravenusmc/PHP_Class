@@ -1,0 +1,46 @@
+/* The CSS in this file deals with the see comment page */ 
+
+body, html {
+    height: 100%; 
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_div {
+  border: 3px solid #333;
+  border-radius: 12px;
+  padding: 15px;
+  background-color: #EB650D;
+}
+
+.button_fix {
+  display: flex;
+  flex-direction: row;
+}
+
+.see_form {
+  background-color: #149AF2;
+  color: #333;
+  border-color: #149AF2;
+}
+
+.middle_form {
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #EB650D;
+  color: #333;
+  border-color: #EB650D;
+}
