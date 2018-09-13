@@ -15,18 +15,18 @@
 <!-- Start of Bootstrap jumbotron -->
 <div class="jumbotron img-fluid">
   <div class='text_background'>
-  <h1 class="display-4 center">Welcome to Comments <?php echo $name; ?>!</h1>
-  <p class="lead center">Write what's on your mind. See what others think.</p>
-  <hr class="my-4">
-  <?php if (isset($name)): ?>
-    <h1 class='center'>Join the conversation <?php echo $name; ?>!</h1>
-    <div class='center'>
-      <a class='add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
-    </div>
-  <?php else: ?>
-    <p class='center'><a class='add_comment_anchor' href="../signup.php">Sign Up to join the Conversation!</a></p>
-  <?php endif; ?>
-</div>
+    <h1 class="display-4 center">Welcome to Comments <?php echo $name; ?>!</h1>
+    <p class="lead center">Write what's on your mind. See what others think.</p>
+    <hr class="my-4">
+    <?php if (isset($name)): ?>
+      <h1 class='center'>Join the conversation <?php echo $name; ?>!</h1>
+      <div class='center'>
+        <a class='add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
+      </div>
+    <?php else: ?>
+      <p class='center'><a class='add_comment_anchor' href="../signup.php">Sign Up to join the Conversation!</a></p>
+    <?php endif; ?>
+  </div>
 </div>
 <!-- End of bootstrap jumbotron -->
 

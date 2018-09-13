@@ -24,13 +24,13 @@
       <form action="index.php" method="post">
 
         <input type="hidden" name="action" value="add_comment" />
-        <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
 
+        <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
         <textarea placeholder='Comment' type='textarea' rows="4" cols="50" name='comment' required>&nbsp;
         </textarea>
 
         <br>
-
+        
         <div class='input_align'>
           <input class='center middle_form' type="submit" value="Add Comment" />
         </div>

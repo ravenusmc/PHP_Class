@@ -31,8 +31,14 @@
       $comment  = filter_input(INPUT_POST, 'comment');
       $user_id = filter_input(INPUT_POST, 'user_id');
       //Getting the current time to insert into the database.
-      date_default_timezone_set('US/Eastern');
-      $today = date("m-d-y G:i:s");
+      date_default_timezone_set('America/New_York');
+      $today = date("Y-m-d G:i:s");
+      echo $today;
+      // $today = strtotime($today);
+
+      // echo $comment . '<br>';
+      // echo $user_id . '<br>';
+      // echo $today . '<br>';
 
       insert_comment($user_id, $comment, $today);
 
@@ -48,7 +54,7 @@
 
       //Getting the current time to insert into the database.
       date_default_timezone_set('US/Eastern');
-      $today = date("m-d-y G:i:s");
+      $today = date("Y-m-d G:i:s");
 
       create_reply($reply, $user_id, $comment_id, $today);
 

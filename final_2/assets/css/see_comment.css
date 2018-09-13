@@ -5,7 +5,6 @@ body, html {
 }
 
 .wrapper {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,6 +23,7 @@ body, html {
   border-radius: 12px;
   padding: 15px;
   background-color: #EB650D;
+  margin-top: 50px;
 }
 
 .button_fix {

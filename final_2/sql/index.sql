@@ -15,6 +15,7 @@ CREATE TABLE comments (
     ON DELETE CASCADE
 );
 
+
 CREATE TABLE replies (
   reply_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   reply VARCHAR(255) NOT NULL, 
@@ -28,9 +29,25 @@ CREATE TABLE replies (
 );
 
 
+CREATE TABLE comments (
+  comment_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  comment VARCHAR(255) NOT NULL, 
+  user_id INT NOT NULL, 
+  created DATETIME default now() on update now(),
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+    ON DELETE CASCADE
+);
+
+
 --Use NOW() to insert for current date time. 
 
 SELECT c.comment, c.created, r.reply, r.created, c.comment_id
 FROM comments c 
 JOIN replies r on r.comment_id = c.comment_id
 WHERE c.comment_id = 1;
+
+
+INSERT INTO comments
+(comment, user_id, created)
+                VALUES
+('manual test', 1, '2018-09-13 17:39:35');
