@@ -12,18 +12,23 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/home.css">
 
-<div class='center'>
-  <h1>Welcome to Comments <?php echo $name; ?>!</h1>
-  <h3>Write what's on your mind. See what others think.</h3>
-  <h4>
-    <?php if (isset($name)): ?>
-      Join the conversation <?php echo $name; ?>!
+<!-- Start of Bootstrap jumbotron -->
+<div class="jumbotron img-fluid">
+  <div class='text_background'>
+  <h1 class="display-4 center">Welcome to Comments <?php echo $name; ?>!</h1>
+  <p class="lead center">Write what's on your mind. See what others think.</p>
+  <hr class="my-4">
+  <?php if (isset($name)): ?>
+    <h1 class='center'>Join the conversation <?php echo $name; ?>!</h1>
+    <div class='center'>
       <a class='add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
-    <?php else: ?>
-      <p>Sign Up to join the Conversation!</p>
-    <?php endif; ?>
-  </h4>
+    </div>
+  <?php else: ?>
+    <p class='center'><a class='add_comment_anchor' href="../signup.php">Sign Up to join the Conversation!</a></p>
+  <?php endif; ?>
 </div>
+</div>
+<!-- End of bootstrap jumbotron -->
 
 <?php foreach ($comments as $comment): ?>
 
