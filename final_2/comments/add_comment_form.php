@@ -44,3 +44,5 @@
   <!-- End of Main section -->
 
 </div>
+
+<?php include '../view/footer.php'; ?>

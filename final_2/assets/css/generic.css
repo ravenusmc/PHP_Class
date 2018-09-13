@@ -6,3 +6,15 @@
 .anchor_div {
   text-align: center;
 }
+
+/* CSS for the Footer */ 
+footer {
+  border-top: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  font-size: 30px;
+}
+

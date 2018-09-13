@@ -69,3 +69,5 @@
   </div>
 
 <?php endforeach; ?>
+
+<?php include '../view/footer.php'; ?>
