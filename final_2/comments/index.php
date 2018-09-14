@@ -39,12 +39,6 @@
       //Getting the current time to insert into the database.
       date_default_timezone_set('America/New_York');
       $today = date("Y-m-d G:i:s");
-      echo $today;
-      // $today = strtotime($today);
-
-      // echo $comment . '<br>';
-      // echo $user_id . '<br>';
-      // echo $today . '<br>';
 
       insert_comment($user_id, $comment, $today);
 
