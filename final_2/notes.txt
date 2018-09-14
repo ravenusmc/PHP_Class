@@ -8,7 +8,6 @@ Use CSS styles to format your pages; fonts, colors, etc.
 
 BONUS: 
 Display replies indented under their associated comment.
-Display the total number of comments.
 Display the total number of replies for each comment.
 
 
@@ -40,6 +39,8 @@ Display comments and replies.
 Display replies under their associated comment.
 
 Display the date and time that the user entered the comment or reply.
+
+Display the total number of comments.
 
 
 NOTES: 

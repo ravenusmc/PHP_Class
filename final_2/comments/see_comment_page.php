@@ -17,7 +17,7 @@
 
     <h1>Comment: <?php echo $comment['comment']; ?></h1>
 
-    <h2>Add a Reply:</h2>
+    <h2 class='center'>Add a Reply:</h2>
 
     <?php if (isset($name)): ?>
 
@@ -45,6 +45,8 @@
   </div>
 
   <h2>Replies:</h2>
+
+  <h3 class='center'>There are currently <?php echo count($comments); ?> replies!</h3>
 
   <?php foreach ($comments as $comment): ?>
 

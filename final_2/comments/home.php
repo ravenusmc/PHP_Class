@@ -30,6 +30,11 @@
 </div>
 <!-- End of bootstrap jumbotron -->
 
+<h1 class='center'>All Comments</h1>
+<h3 class='center'>There are currently <?php echo count($comments); ?>  Comments!</h3>
+<h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
+
+
 <?php foreach ($comments as $comment): ?>
 
   <div class='comment_box'>

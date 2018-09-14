@@ -46,6 +46,18 @@
     return $comments; 
   }
 
+  //This function will help to get all the replies 
+  function get_all_replies() {
+    global $db;
+    $query = "SELECT * FROM replies";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $replies = $statement->fetchAll();
+    $statement->closeCursor();
+    return $replies; 
+  }
+
+
   //This function will create a new reply 
   function create_reply($reply, $user_id, $comment_id, $today){
     global $db;
@@ -161,6 +173,30 @@
     $statement->bindValue(':created', $today);
     $statement->execute();
     $statement->closeCursor();
+  }
+
+  //This function gets all the comments from the comments table 
+  function get_total_comments(){
+    global $db;
+    $query = 'SELECT count(*) FROM comments';
+    $statement = $db->prepare($query);
+    $statement->execute();
+    // $comments = $statement->fetchAll();
+    $total_comments = $statement->rowCount();
+    $statement->closeCursor();
+    return $total_comments;
+  }
+
+  //This function gets all the replies from replies table 
+  function get_total_replies(){
+    global $db;
+    $query = 'SELECT count(*) FROM replies';
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $total_replies = $statement->fetchAll();
+    $total_replies = $statement->rowCount();
+    $statement->closeCursor();
+    return $total_replies;
   }
 
 ?>

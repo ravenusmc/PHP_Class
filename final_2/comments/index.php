@@ -18,7 +18,13 @@
 
     //This case will bring the user to the page that shows all of the prisoners
     case 'home':
+      //This function will get all of the comments 
       $comments = get_all_comments();
+      //This function will get the number of total comments: 
+      $total_comments = get_total_comments();
+      // $total_replies = get_total_replies();
+      $replies = get_all_replies();
+
       include('home.php');
       break;
     //This case will allow the user to go to the add a comment form
