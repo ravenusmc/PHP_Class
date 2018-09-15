@@ -66,7 +66,7 @@
       $comment_id = filter_input(INPUT_POST, 'comment_id');
 
       $comment = get_single_comment($comment_id);
-      $comments = get_both_comments_replies($comment_id);
+      $replies = get_both_comments_replies($comment_id);
 
       include('see_comment_page.php');
       break;

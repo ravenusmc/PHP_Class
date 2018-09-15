@@ -25,7 +25,7 @@
       <form action="index.php" method="post">
 
         <input type="hidden" name="action" value="add_reply" />
-        <input type='hidden' name="user_id" value='<?php echo $comment['user_id']; ?>'>
+        <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
         <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
 
         <textarea placeholder='Reply' type='textarea' rows="4" cols="50" name='reply' required>&nbsp;
@@ -46,12 +46,13 @@
 
   <h2>Replies:</h2>
 
-  <h3 class='center'>There are currently <?php echo count($comments); ?> replies!</h3>
+  <h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
-  <?php foreach ($comments as $comment): ?>
+  <?php foreach ($replies as $reply): ?>
 
-    <p><?php echo $comment['reply']; ?></p>
-    <p><?php echo $comment['created']; ?></p>
+    <p><?php echo $reply['userName']; ?> Says:</p>
+    <p><?php echo $reply['reply']; ?></p>
+    <p><?php echo $reply['created']; ?></p>
 
     <?php if (isset($name)): ?>
 
@@ -61,7 +62,7 @@
       <form action="index.php" method="post">
 
         <input type="hidden" name="action" value="delete_reply" />
-        <input type='hidden' name="reply_id" value='<?php echo $comment['reply_id']; ?>'>
+        <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
         <input class='middle_form' type="submit" value="Delete Reply" />
 
       </form>
@@ -71,7 +72,7 @@
       <form action="index.php" method="post">
 
         <input type="hidden" name="action" value="update_reply_form" />
-        <input type='hidden' name="reply_id" value='<?php echo $comment['reply_id']; ?>'>
+        <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
         <input class='see_form' type="submit" value="Update Reply" />
 
       </form>
