@@ -13,6 +13,7 @@
 
 <div class='wrapper'>
 
+  <!-- This div will deal with the area for a user to a reply -->
   <div class='top_div'>
 
     <h1>Comment: <?php echo $comment['comment']; ?></h1>
@@ -43,6 +44,7 @@
     <?php endif; ?>
 
   </div>
+  <!-- End of Div area -->
 
   <h2>Replies:</h2>
 
