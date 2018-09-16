@@ -34,14 +34,15 @@
 <h3 class='center'>There are currently <?php echo count($comments); ?>  Comments!</h3>
 <h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
-
+<!-- looping through the comments to display each one -->
 <?php foreach ($comments as $comment): ?>
 
-  <div class='comment_box'>
+  <div class='comment_box_top_div'>
 
-    <h3><?php echo $comment['userName']; ?> Says:</h3>
-    <p><?php echo $comment['comment']; ?></p>
-    <p><?php echo $comment['created']; ?></p>
+    <div class='comment_box'>
+
+    <h3><?php echo $comment['userName']; ?> Says: <?php echo $comment['comment']; ?></h3>
+    <p>On: <?php echo $comment['created']; ?></p>
 
     <div class='button_div'>
 
@@ -76,8 +77,11 @@
     <?php endif; ?>
     <!-- End of conditional statement -->
 
+    </div>
+
   </div>
 
 <?php endforeach; ?>
+<!-- End of loop -->
 
 <?php include '../view/footer.php'; ?>

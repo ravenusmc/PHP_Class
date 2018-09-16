@@ -15,12 +15,19 @@
   border-radius: 12px;
 }
 
-.comment_box {
+.comment_box_top_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+}
+
+.comment_box {
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .button_div {
