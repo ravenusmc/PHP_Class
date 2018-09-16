@@ -41,7 +41,7 @@
 
     <div class='comment_box'>
 
-    <h3><?php echo $comment['userName']; ?> Says: <?php echo $comment['comment']; ?></h3>
+    <h3><?php echo $comment['userName']; ?> says: <?php echo $comment['comment']; ?></h3>
     <p>On: <?php echo $comment['created']; ?></p>
 
     <div class='button_div'>

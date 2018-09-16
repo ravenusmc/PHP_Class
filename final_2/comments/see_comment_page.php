@@ -50,7 +50,10 @@
 
   <h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
+  <!-- Start of loop to display all replies for each comment -->
   <?php foreach ($replies as $reply): ?>
+
+  <div class='reply_box'>
 
     <p><?php echo $reply['userName']; ?> Says:</p>
     <p><?php echo $reply['reply']; ?></p>
@@ -84,9 +87,10 @@
 
     <?php endif; ?>
 
-    <hr>
+  </div>
 
   <?php endforeach; ?>
+  <!-- End of loop to display all replies for each comment -->
 
 </div>
 
