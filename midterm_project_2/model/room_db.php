@@ -82,6 +82,72 @@
     $statement->closeCursor();
   }
 
+  function double_reservation_check($room_id, $from_date, $to_date) {
+    global $db; 
+    $query = 'SELECT * FROM room_reservations
+    WHERE room_id = :room_id AND 
+    start_date = :start_date AND 
+    end_date = :end_date';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':room_id', $room_id);
+    $statement->bindValue(':start_date', $from_date);
+    $statement->bindValue(':end_date', $to_date);
+    $statement->execute();
+    $double_booking_check = $statement->fetchAll();
+    $statement->closeCursor();
+    return $double_booking_check;
+  }
+
+  function first_time_check($room_id, $from_date, $to_date) {
+    global $db; 
+    $query = 'SELECT * FROM room_reservations
+    WHERE room_id = :room_id AND 
+    :start_date > start_date  AND
+    :start_date < end_date';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':room_id', $room_id);
+    $statement->bindValue(':start_date', $from_date);
+    $statement->bindValue(':end_date', $to_date);
+    $statement->execute();
+    $first_time_check = $statement->fetchAll();
+    $statement->closeCursor();
+    return $first_time_check;
+  }
+
+  function second_time_check($room_id, $from_date, $to_date) {
+    global $db; 
+    $query = 'SELECT * FROM room_reservations
+    WHERE room_id = :room_id AND 
+    :end_date > start_date  AND
+    :end_date < end_date';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':room_id', $room_id);
+    $statement->bindValue(':start_date', $from_date);
+    $statement->bindValue(':end_date', $to_date);
+    $statement->execute();
+    $second_time_check = $statement->fetchAll();
+    $statement->closeCursor();
+    return $second_time_check;
+  }
+
+  //This function will check to see if a reservation conflicts with another reservation by 
+  //seeing if they overlap.
+  function from_between_check($room_id, $from_date, $to_date) {
+    global $db; 
+    $query = 'SELECT * FROM room_reservations
+    WHERE room_id = :room_id AND 
+    :start_date <= start_date AND
+    :end_date >= end_date';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':room_id', $room_id);
+    $statement->bindValue(':start_date', $from_date);
+    $statement->bindValue(':end_date', $to_date);
+    $statement->execute();
+    $from_between_check = $statement->fetchAll();
+    $statement->closeCursor();
+    return $from_between_check;
+  }
+
   function date_check($room_id, $from_date, $to_date) {
     global $db; 
     $query = 'SELECT * FROM room_reservations

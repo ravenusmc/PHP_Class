@@ -87,20 +87,38 @@
       $number_of_days = $interval->format('%a');
       $number_of_days = intval($number_of_days);
 
-      //This checks type. Keeping it here for reference reasons. 
-      // echo gettype($number_of_days);
-
       //Checking to see if the date falls on the weekend 
       $weekend_one = (date('N', strtotime($from_date)) >= 6);
       $weekend_two = (date('N', strtotime($to_date)) >= 6);
-      //Checking to ensure that a time does not conflict with another reservation. 
-      $matches = date_check($room_id, $from_date, $to_date);
-      $duplicate_time = count($matches);
 
       //Keeping for my future reference. 
       // foreach ($matches as $match){
       //   echo $match['start_date'];
       // }
+
+      //Checking to ensure that a time does not conflict with another reservation. 
+      $matches = date_check($room_id, $from_date, $to_date);
+      $duplicate_time = count($matches);
+
+      //Checking to see if a room is double booked
+      $double_booking_check = double_reservation_check($room_id, $from_date, $to_date);
+      $double_booking_matches = count($matches);
+
+      //Checking to see if the fist time over lap
+      $first_time_check = first_time_check($room_id, $from_date, $to_date);
+      //Checkinto see if the to date has a time over lap
+      $second_time_check = second_time_check($room_id, $from_date, $to_date);
+
+      //Checking to see if a reservation conflicts with another one 
+      $from_between_check = from_between_check($room_id, $from_date, $to_date);
+
+      //var_dump($from_between_check);
+
+      // echo $double_booking_matches . '<br>';
+      // echo $room_id . '<br>';
+      // echo $from_date . '<br>';
+      // echo $to_date . '<br>';
+      // var_dump($double_booking_check);
 
       //Error checking 
       if ($datetime1 > $datetime2){
@@ -111,11 +129,21 @@
         $_SESSION['Error'] = "Sorry, that date falls on the weekend!!";
       }else if ($number_of_days > 0){
         $_SESSION['Error'] = "Sorry, the reservation cannot span days";
-      }else if ($duplicate_time > 0){
-        $_SESSION['Error'] = "Sorry, that time is already taken in that room!";
+      }else if ($double_booking_check) {
+        $_SESSION['Error'] = "Sorry, Your booking in the same room that's occupied during that time!";
+      }else if ($first_time_check){
+        $_SESSION['Error'] = "Sorry, the 'from' time conflicts in that room";
+      }else if ($second_time_check) {
+        $_SESSION['Error'] = "Sorry, the 'to' time conflicts in that room";
+      }else if ($from_between_check){
+        $_SESSION['Error'] = "Sorry, time over lap issue in room!";
       }
+
+      // else if ($duplicate_time > 0){
+      //   $_SESSION['Error'] = "Sorry, that time is already taken in that room!";
+      // }
       else {
-        //Calling the make_reseravation function 
+        //Calling the make_reseravation function to reserve a room
         make_reservation($room_id, $from_date, $to_date);
       }
 
