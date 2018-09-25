@@ -96,6 +96,7 @@
       //   echo $match['start_date'];
       // }
 
+
       //Checking to ensure that a time does not conflict with another reservation. 
       $matches = date_check($room_id, $from_date, $to_date);
       $duplicate_time = count($matches);
@@ -124,7 +125,8 @@
       if ($datetime1 > $datetime2){
         $_SESSION['Error'] = "The second date is earlier than the first date!";
       }else if ($datetime1 == $datetime2){
-        $_SESSION['Error'] = "The dates are the same!!";
+        // $_SESSION['Error'] = "The dates are the same!!";
+        $message = "The dates are the same!!";
       }else if ($weekend_one == 1 or $weekend_two == 1){
         $_SESSION['Error'] = "Sorry, that date falls on the weekend!!";
       }else if ($number_of_days > 0){
@@ -148,13 +150,20 @@
       }
 
       //Display an error message 
-      if( isset($_SESSION['Error']) ) {
-              echo "<h1>" . $_SESSION['Error'] . "</h1>";
-              unset($_SESSION['Error']);
-              echo '<h2>Please hit the back button!</h2>';
+      // if( isset($_SESSION['Error']) ) {
+      //         echo "<h1>" . $_SESSION['Error'] . "</h1>";
+      //         unset($_SESSION['Error']);
+      //         echo '<h2>Please hit the back button!</h2>';
+      // }
+
+      if ($message){
+        $error = $message; 
+        include('../errors/error.php');
+      }else {
+        header('Location: .?action=make_reservation_form');
       }
 
-      header('Location: .?action=make_reservation_form');
+      
       break;
     //This case will delete a reservation
     case 'delete_reservation':

@@ -148,6 +148,7 @@
     return $from_between_check;
   }
 
+  //This function is no longer used in this project but it once was.
   function date_check($room_id, $from_date, $to_date) {
     global $db; 
     $query = 'SELECT * FROM room_reservations

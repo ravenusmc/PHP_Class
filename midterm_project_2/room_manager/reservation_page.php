@@ -8,6 +8,11 @@
 
     <section class='form_section'>
 
+      <p><?php echo $message; ?></p>
+      <?php if (isset($message)): ?>
+        <p><?php echo $message; ?></p>
+      <?php endif; ?>
+
       <form action="index.php" method="post">
 
         <!-- This line will dictate the action -->
