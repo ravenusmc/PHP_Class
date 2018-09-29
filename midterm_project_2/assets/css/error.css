@@ -1,0 +1,16 @@
+/* The CSS in this file will deal with all of the validation errors on the error.php file */
+
+main {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+}
+
+.anchor_center {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

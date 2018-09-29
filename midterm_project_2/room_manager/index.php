@@ -123,38 +123,25 @@
 
       //Error checking 
       if ($datetime1 > $datetime2){
-        $_SESSION['Error'] = "The second date is earlier than the first date!";
+        $message = "The second date is earlier than the first date!";
       }else if ($datetime1 == $datetime2){
-        // $_SESSION['Error'] = "The dates are the same!!";
         $message = "The dates are the same!!";
       }else if ($weekend_one == 1 or $weekend_two == 1){
-        $_SESSION['Error'] = "Sorry, that date falls on the weekend!!";
-      }else if ($number_of_days > 0){
-        $_SESSION['Error'] = "Sorry, the reservation cannot span days";
+        $message = "Sorry, that date falls on the weekend!!";
+      }else if ($number_of_days > 0){ 
+        $message = "Sorry, the reservation cannot span days";
       }else if ($double_booking_check) {
-        $_SESSION['Error'] = "Sorry, Your booking in the same room that's occupied during that time!";
+        $message = "Sorry, Your booking in the same room that's occupied during that time!";
       }else if ($first_time_check){
-        $_SESSION['Error'] = "Sorry, the 'from' time conflicts in that room";
+        $message = "Sorry, the 'from' time conflicts in that room";
       }else if ($second_time_check) {
-        $_SESSION['Error'] = "Sorry, the 'to' time conflicts in that room";
+        $message = "Sorry, the 'to' time conflicts in that room";
       }else if ($from_between_check){
-        $_SESSION['Error'] = "Sorry, time over lap issue in room!";
-      }
-
-      // else if ($duplicate_time > 0){
-      //   $_SESSION['Error'] = "Sorry, that time is already taken in that room!";
-      // }
-      else {
+        $message = "Sorry, time over lap issue in room!";
+      }else {
         //Calling the make_reseravation function to reserve a room
         make_reservation($room_id, $from_date, $to_date);
       }
-
-      //Display an error message 
-      // if( isset($_SESSION['Error']) ) {
-      //         echo "<h1>" . $_SESSION['Error'] . "</h1>";
-      //         unset($_SESSION['Error']);
-      //         echo '<h2>Please hit the back button!</h2>';
-      // }
 
       if ($message){
         $error = $message; 
