@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/home.css">
 
+<?php if (isset($name)): ?>
 <!-- Start of Bootstrap jumbotron -->
 <div class="jumbotron img-fluid">
   <div class='text_background'>
@@ -83,5 +84,9 @@
 
 <?php endforeach; ?>
 <!-- End of loop -->
+<?php else:  ?>
+    <h1>Please log in!</h1>
+<?php endif; ?>
+
 
 <?php include '../view/footer.php'; ?>
