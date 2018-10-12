@@ -1,7 +1,7 @@
 # PHP Work
 ## Intro
 
-The purpose of this file is to hold all of my PHP work for my GTC PHP class. 
+The purpose of this file is to hold all of my PHP work for my GTC PHP class. It contains work from both PHP 1 and 2 from the school.
 
 
 ### Technology Stack
