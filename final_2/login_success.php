@@ -1,6 +1,5 @@
 <?php
  $name = $_session["username"];
- echo $name;
 
 ?>
 
