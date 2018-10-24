@@ -1,8 +1,8 @@
 <?php
 
-  $dsn = 'mysql:host=localhost;dbname=mikcud_ei';
-  $username = 'mikcud_ei';
-  $password = 'w7qvqjy6';
+  $dsn = 'mysql:host=localhost;dbname=my_guitar_shop2';
+  $username = 'root';
+  $password = 'root';
 
 
   try {

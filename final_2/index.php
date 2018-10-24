@@ -120,13 +120,3 @@
   <!-- End of the main section -->
 
 </div>
-
-<?php 
-  
-
-  // $password = 'Mike';
-  // $hash = password_hash($password, PASSWORD_DEFAULT);
-
-  // echo $password . ' ' . $hash;
-
-?>
