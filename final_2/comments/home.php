@@ -85,7 +85,12 @@
 <?php endforeach; ?>
 <!-- End of loop -->
 <?php else:  ?>
-    <h1>Please log in!</h1>
+
+    <div class='not_logged_in_div center'>
+      <h1>Please Sign Up!</h1>
+      <a class='sign_up_link' href="../signup.php">Sign Up</a>
+    </div>
+
 <?php endif; ?>
 
 

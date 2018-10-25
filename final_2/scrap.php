@@ -15,23 +15,8 @@
 
 ?>
 
-<!--       <form method="post">
-        <input placeholder='username' type="text" name='username' required>
-        <input placeholder='password' type="text" name='password' required>
-        <button type="submit">Login</button>
-      </form> -->
 
-<!--     <form method="post">
-      <input placeholder='Username' type="text" name='username' required>
-      <input class="<?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>" placeholder='Password' type="text" name='password' required>
-      <input placeholder='Confirm Password' type="text" name='password2' required>
-      <span><?php echo $confirm_password_err; ?></span>
-      <input type="submit" name="login" value="Submit">
-    </form> -->
-
-<!-- <a href="logout.php">LogOut</a> -->
-
-<div class='center'>
+<!-- <div class='center'>
   <h1>Welcome to Comments <?php echo $name; ?>!</h1>
   <h3>Write what's on your mind. See what others think.</h3>
   <h4>
@@ -42,4 +27,4 @@
       <p>Sign Up to join the Conversation!</p>
     <?php endif; ?>
   </h4>
-</div>
+</div> -->
