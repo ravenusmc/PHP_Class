@@ -38,6 +38,13 @@
 <!-- looping through the comments to display each one -->
 <?php foreach ($comments as $comment): ?>
 
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col">
+    <h3><?php echo $comment['userName']; ?> says: <?php echo $comment['comment']; ?></h3>
+    <p>On: <?php echo $comment['created']; ?></p>
+  </div>
+</div>
+
   <div class='comment_box_top_div'>
 
     <div class='comment_box'>
