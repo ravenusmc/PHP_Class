@@ -11,10 +11,14 @@ function process_image($dir, $filename) {
 
     // Set up the write paths
     $image_path_400 = $dir . $image_name . '_400' . $ext;
+    $image_path_250 = $dir . $image_name . '_250' . $ext;
     $image_path_100 = $dir . $image_name . '_100' . $ext;
 
     // Create an image that's a maximum of 400x300 pixels
     resize_image($image_path, $image_path_400, 400, 300);
+
+    // Create an image that's a maximum of 250x250 pixels
+    resize_image($image_path, $image_path_250, 250, 250);
 
     // Create a thumbnail image that's a maximum of 100x100 pixels
     resize_image($image_path, $image_path_100, 100, 100);
@@ -102,3 +106,4 @@ function resize_image($old_image_path, $new_image_path,
 }
 
 ?>
+

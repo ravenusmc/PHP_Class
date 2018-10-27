@@ -15,6 +15,8 @@
               enctype="multipart/form-data">
             <input type="hidden" name="action" value="upload">
             <input type="file" name="file1"><br>
+            <input type="file" name="file2"><br>
+            <input type="file" name="file3"><br>
             <input id="upload_button" type="submit" value="Upload">
         </form>
         <h2>Images in the directory</h2>

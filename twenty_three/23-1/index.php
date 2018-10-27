@@ -13,20 +13,27 @@ if ($action == NULL) {
     }
 }
 
-switch ($action) {
-    case 'upload':        
-        if (isset($_FILES['file1'])) {
-            $filename = $_FILES['file1']['name'];
-            if (empty($filename)) {
-                break;
-            }
-            $source = $_FILES['file1']['tmp_name'];
-            $target = $image_dir_path . DIRECTORY_SEPARATOR . $filename;
-            move_uploaded_file($source, $target);
-
-            // create the '400' and '100' versions of the image
-            process_image($image_dir_path, $filename);
+function upload_file($name) {
+    global $image_dir_path;
+    if (isset($_FILES[$name])) {
+        $filename = $_FILES[$name]['name'];
+        if (empty($filename)) {
+            return;
         }
+        $source = $_FILES[$name]['tmp_name'];
+        $target = $image_dir_path . DIRECTORY_SEPARATOR . $filename;
+        move_uploaded_file($source, $target);
+
+        // create the '400', '250', and '100' versions of the image
+        process_image($image_dir_path, $filename);
+    }
+}
+
+switch ($action) {
+    case 'upload':
+        upload_file('file1');
+        upload_file('file2');
+        upload_file('file3');
         break;
     case 'delete':
         $filename = filter_input(INPUT_GET, 'filename', 
