@@ -35,12 +35,11 @@
 <h3 class='center'>There are currently <?php echo count($comments); ?>  Comments!</h3>
 <h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
-<div class="mdl-grid">
 <!-- looping through the comments to display each one -->
+<div class='card_row'>
 <?php foreach ($comments as $comment): ?>
 
-
-  <div class="mdl-cell mdl-cell--4-col">
+  <div>
 
     <div class='comment_box_top_div'>
 
@@ -91,6 +90,7 @@
 <?php endforeach; ?>
 <!-- End of loop -->
 </div>
+
 <?php else:  ?>
 
     <div class='not_logged_in_div center'>

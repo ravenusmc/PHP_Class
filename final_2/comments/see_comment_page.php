@@ -53,41 +53,41 @@
   <!-- Start of loop to display all replies for each comment -->
   <?php foreach ($replies as $reply): ?>
 
-  <div class='reply_box'>
+    <div class='reply_box'>
 
-    <p><?php echo $reply['userName']; ?> Says:</p>
-    <p><?php echo $reply['reply']; ?></p>
-    <p><?php echo $reply['created']; ?></p>
+      <p><?php echo $reply['userName']; ?> Says:</p>
+      <p><?php echo $reply['reply']; ?></p>
+      <p><?php echo $reply['created']; ?></p>
 
-    <?php if (isset($name)): ?>
+      <?php if (isset($name)): ?>
 
-    <div class='button_fix'>
+      <div class='button_fix'>
 
-      <!-- Form to delete a comment -->
-      <form action="index.php" method="post">
+        <!-- Form to delete a comment -->
+        <form action="index.php" method="post">
 
-        <input type="hidden" name="action" value="delete_reply" />
-        <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
-        <input class='middle_form' type="submit" value="Delete Reply" />
+          <input type="hidden" name="action" value="delete_reply" />
+          <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
+          <input class='middle_form' type="submit" value="Delete Reply" />
 
-      </form>
-      <!-- End of form to delete comment -->
+        </form>
+        <!-- End of form to delete comment -->
 
-      <!-- Form to edit a comment -->
-      <form action="index.php" method="post">
+        <!-- Form to edit a comment -->
+        <form action="index.php" method="post">
 
-        <input type="hidden" name="action" value="update_reply_form" />
-        <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
-        <input class='see_form' type="submit" value="Update Reply" />
+          <input type="hidden" name="action" value="update_reply_form" />
+          <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
+          <input class='see_form' type="submit" value="Update Reply" />
 
-      </form>
-      <!-- End of form to edit comment -->
+        </form>
+        <!-- End of form to edit comment -->
+
+      </div>
+
+      <?php endif; ?>
 
     </div>
-
-    <?php endif; ?>
-
-  </div>
 
   <?php endforeach; ?>
   <!-- End of loop to display all replies for each comment -->
