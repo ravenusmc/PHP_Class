@@ -22,7 +22,7 @@
     <?php if (isset($name)): ?>
       <h1 class='center'>Join the conversation <?php echo $name; ?>!</h1>
       <div class='center'>
-        <a class='add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
+        <a id='comment_change' class='add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
       </div>
     <?php else: ?>
       <p class='center'><a class='add_comment_anchor' href="../signup.php">Sign Up to join the Conversation!</a></p>
@@ -100,5 +100,5 @@
 
 <?php endif; ?>
 
-
+<script type="text/javascript" src='../assets/js/home.js'></script>
 <?php include '../view/footer.php'; ?>

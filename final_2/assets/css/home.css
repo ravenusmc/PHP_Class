@@ -41,6 +41,12 @@
   flex-direction: row;
 }
 
+.add_comment_anchor {
+  font-size: 30px;
+  color: blue;
+}
+
+
 .add_comment_anchor:hover {
   text-decoration: none;
   color: #EB650D;
