@@ -35,54 +35,54 @@
 <h3 class='center'>There are currently <?php echo count($comments); ?>  Comments!</h3>
 <h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
+<div class="mdl-grid">
 <!-- looping through the comments to display each one -->
 <?php foreach ($comments as $comment): ?>
 
-  <div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">1</div>
-  <div class="mdl-cell mdl-cell--4-col">2</div>
-  <div class="mdl-cell mdl-cell--4-col">3</div>
-</div>
 
-  <div class='comment_box_top_div'>
+  <div class="mdl-cell mdl-cell--4-col">
 
-    <div class='comment_box'>
+    <div class='comment_box_top_div'>
 
-    <h3><?php echo $comment['userName']; ?> says: <?php echo $comment['comment']; ?></h3>
-    <p>On: <?php echo $comment['created']; ?></p>
+      <div class='comment_box'>
 
-    <div class='button_div'>
+        <h3><?php echo $comment['userName']; ?> says: <?php echo $comment['comment']; ?></h3>
+        <p>On: <?php echo $comment['created']; ?></p>
 
-      <form action="index.php" method="post">
-        <input class='see_form' type="hidden" name="action" value="comment_page" />
-        <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-        <input class='see_form' type="submit" value="See Replies" />
-      </form>
+        <div class='button_div'>
 
-      <!-- This conditional statement will only allow logged in users to delete/update comments -->
-      <?php if (isset($name)): ?>
+          <form action="index.php" method="post">
+            <input class='see_form' type="hidden" name="action" value="comment_page" />
+            <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+            <input class='see_form' type="submit" value="See Replies" />
+          </form>
 
-        <!-- Form action to delete comment -->
-        <form action="index.php" method="post">
-          <input class='middle_form' type="hidden" name="action" value="delete_comment" />
-          <input class='middle_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-          <input class='middle_form' type="submit" value="Delete Comment" />
-        </form>
-        <!-- End of form to delete comment -->
+          <!-- This conditional statement will only allow logged in users to delete/update comments -->
+          <?php if (isset($name)): ?>
 
-        <!-- Form action to update comment -->
-        <form action="index.php" method="post">
-          <input class='see_form' type="hidden" name="action" value="update_comment_form" />
-          <input class='see_form' type='hidden' name="user_id" value='<?php echo $id; ?>'>
-          <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-          <input class='see_form' type="submit" value="Update Comment" />
-        </form>
-        <!-- End of form to updatecomment -->
+            <!-- Form action to delete comment -->
+            <form action="index.php" method="post">
+              <input class='middle_form' type="hidden" name="action" value="delete_comment" />
+              <input class='middle_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+              <input class='middle_form' type="submit" value="Delete Comment" />
+            </form>
+            <!-- End of form to delete comment -->
+
+            <!-- Form action to update comment -->
+            <form action="index.php" method="post">
+              <input class='see_form' type="hidden" name="action" value="update_comment_form" />
+              <input class='see_form' type='hidden' name="user_id" value='<?php echo $id; ?>'>
+              <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
+              <input class='see_form' type="submit" value="Update Comment" />
+            </form>
+            <!-- End of form to updatecomment -->
+
+          </div>
+
+        <?php endif; ?>
+        <!-- End of conditional statement -->
 
       </div>
-
-    <?php endif; ?>
-    <!-- End of conditional statement -->
 
     </div>
 
@@ -90,6 +90,7 @@
 
 <?php endforeach; ?>
 <!-- End of loop -->
+</div>
 <?php else:  ?>
 
     <div class='not_logged_in_div center'>
