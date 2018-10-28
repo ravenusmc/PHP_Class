@@ -28,7 +28,7 @@
     <!--   <textarea placeholder='Test' type='textarea' rows="4" cols="50" name='comment' required>&nbsp;
       </textarea> -->
 
-      <input class='middle_form' type="submit" value="Update Comment" />
+      <input class='middle_form anchor_style' type="submit" value="Update Comment" />
 
     </form>
 

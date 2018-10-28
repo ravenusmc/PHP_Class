@@ -7,6 +7,15 @@
   text-align: center;
 }
 
+.anchor_style {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.anchor_style:hover {
+  background-color: green;
+}
+
 /* CSS for the Footer */ 
 footer {
   border-top: 2px solid black;
@@ -17,4 +26,5 @@ footer {
   height: 150px;
   font-size: 30px;
 }
+
 

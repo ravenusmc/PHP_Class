@@ -35,7 +35,7 @@
         <br>
 
         <div class='input_align'>
-          <input class='see_form' type="submit" value="Add Reply" />
+          <input class='see_form anchor_style' type="submit" value="Add Reply" />
         </div>
 
       </form>
@@ -50,6 +50,7 @@
 
   <h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
+  <div class='comment_row'>
   <!-- Start of loop to display all replies for each comment -->
   <?php foreach ($replies as $reply): ?>
 
@@ -68,7 +69,7 @@
 
           <input type="hidden" name="action" value="delete_reply" />
           <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
-          <input class='middle_form' type="submit" value="Delete Reply" />
+          <input class='middle_form anchor_style' type="submit" value="Delete Reply" />
 
         </form>
         <!-- End of form to delete comment -->
@@ -78,7 +79,7 @@
 
           <input type="hidden" name="action" value="update_reply_form" />
           <input type='hidden' name="reply_id" value='<?php echo $reply['reply_id']; ?>'>
-          <input class='see_form' type="submit" value="Update Reply" />
+          <input class='see_form anchor_style' type="submit" value="Update Reply" />
 
         </form>
         <!-- End of form to edit comment -->
@@ -91,6 +92,7 @@
 
   <?php endforeach; ?>
   <!-- End of loop to display all replies for each comment -->
+  </div>
 
 </div>
 
