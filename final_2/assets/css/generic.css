@@ -16,6 +16,10 @@
   background-color: green;
 }
 
+.font {
+  font-family: 'Mali', cursive;
+}
+
 /* CSS for the Footer */ 
 footer {
   border-top: 2px solid black;

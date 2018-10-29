@@ -16,13 +16,13 @@
 <!-- Start of Bootstrap jumbotron -->
 <div class="jumbotron img-fluid">
   <div class='text_background'>
-    <h1 class="display-4 center">Welcome to Comments <?php echo $name; ?>!</h1>
-    <p class="lead center">Write what's on your mind. See what others think.</p>
+    <h1 class="font display-4 center">Welcome to Comments <?php echo $name; ?>!</h1>
+    <p class="font lead center">Write what's on your mind. See what others think.</p>
     <hr class="my-4">
     <?php if (isset($name)): ?>
-      <h1 class='center'>Join the conversation <?php echo $name; ?>!</h1>
+      <h1 class='font center'>Join the conversation <?php echo $name; ?>!</h1>
       <div class='center'>
-        <a id='comment_change' class='add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
+        <a id='comment_change' class='font add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
       </div>
     <?php else: ?>
       <p class='center'><a class='add_comment_anchor' href="../signup.php">Sign Up to join the Conversation!</a></p>
@@ -31,9 +31,9 @@
 </div>
 <!-- End of bootstrap jumbotron -->
 
-<h1 class='center'>All Comments</h1>
-<h3 class='center'>There are currently <?php echo count($comments); ?>  Comments!</h3>
-<h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
+<h1 class='font center'>All Comments</h1>
+<h3 class='font center'>There are currently <?php echo count($comments); ?>  Comments!</h3>
+<h3 class='font center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
 <!-- looping through the comments to display each one -->
 <div class='card_row'>
