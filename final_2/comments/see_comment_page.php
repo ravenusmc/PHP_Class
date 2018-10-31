@@ -16,9 +16,9 @@
   <!-- This div will deal with the area for a user to a reply -->
   <div class='top_div'>
 
-    <h1>Comment: <?php echo $comment['comment']; ?></h1>
+    <h1 class='font'>Comment: <?php echo $comment['comment']; ?></h1>
 
-    <h2 class='center'>Add a Reply:</h2>
+    <h2 class='font center'>Add a Reply:</h2>
 
     <?php if (isset($name)): ?>
 
@@ -46,9 +46,9 @@
   </div>
   <!-- End of Div area -->
 
-  <h2>Replies:</h2>
+  <h2 class='font'>Replies:</h2>
 
-  <h3 class='center'>There are currently <?php echo count($replies); ?> replies!</h3>
+  <h3 class='font center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
   <div class='comment_row'>
   <!-- Start of loop to display all replies for each comment -->

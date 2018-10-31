@@ -15,7 +15,7 @@
 
   <main>
 
-    <h1>Update Reply</h1>
+    <h1 class='font'>Update Reply</h1>
 
     <form action="index.php" method="post">
 

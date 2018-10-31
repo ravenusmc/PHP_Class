@@ -20,6 +20,10 @@
   font-family: 'Mali', cursive;
 }
 
+.font_2 {
+  font-family: 'KoHo', sans-serif;
+}
+
 /* CSS for the Footer */ 
 footer {
   border-top: 2px solid black;

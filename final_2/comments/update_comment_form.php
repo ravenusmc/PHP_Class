@@ -15,7 +15,7 @@
 
   <main>
 
-    <h1 class='center'>Update The Comment</h1>
+    <h1 class='font center'>Update The Comment</h1>
 
     <form action="index.php" method="post">
 

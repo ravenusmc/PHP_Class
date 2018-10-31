@@ -45,15 +45,15 @@
 
       <div class='comment_box'>
 
-        <h3><?php echo $comment['userName']; ?> says: <?php echo $comment['comment']; ?></h3>
-        <p>On: <?php echo $comment['created']; ?></p>
+        <h3 class='font_2'><?php echo $comment['userName']; ?> says: <?php echo $comment['comment']; ?></h3>
+        <p class='font_2'>On: <?php echo $comment['created']; ?></p>
 
         <div class='button_div'>
 
           <form action="index.php" method="post">
             <input class='see_form' type="hidden" name="action" value="comment_page" />
             <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-            <input class='see_form anchor_style' type="submit" value="See Replies" />
+            <input class='font_2 see_form anchor_style' type="submit" value="See Replies" />
           </form>
 
           <!-- This conditional statement will only allow logged in users to delete/update comments -->
@@ -63,7 +63,7 @@
             <form action="index.php" method="post">
               <input class='middle_form' type="hidden" name="action" value="delete_comment" />
               <input class='middle_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-              <input class='middle_form anchor_style' type="submit" value="Delete Comment" />
+              <input class='font_2 middle_form anchor_style' type="submit" value="Delete Comment" />
             </form>
             <!-- End of form to delete comment -->
 
@@ -72,7 +72,7 @@
               <input class='see_form' type="hidden" name="action" value="update_comment_form" />
               <input class='see_form' type='hidden' name="user_id" value='<?php echo $id; ?>'>
               <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-              <input class='see_form anchor_style' type="submit" value="Update Comment" />
+              <input class='font_2 see_form anchor_style' type="submit" value="Update Comment" />
             </form>
             <!-- End of form to updatecomment -->
 

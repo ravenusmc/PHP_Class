@@ -18,7 +18,7 @@
 
     <section>
 
-      <h1 class='center'>Add Comment</h1>
+      <h1 class='font center'>Add Comment</h1>
 
       <!-- Start of form -->
       <form action="index.php" method="post">
