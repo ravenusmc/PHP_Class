@@ -32,7 +32,7 @@
         <br>
         
         <div class='input_align'>
-          <input class='center middle_form' type="submit" value="Add Comment" />
+          <input class='font_2 center middle_form' type="submit" value="Add Comment" />
         </div>
 
       </form>

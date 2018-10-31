@@ -29,8 +29,10 @@
         <input type='hidden' name="user_id" value='<?php echo $id; ?>'>
         <input type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
 
-        <textarea placeholder='Reply' type='textarea' rows="4" cols="50" name='reply' required>&nbsp;
-        </textarea>
+        <div class='input_align'>
+          <textarea placeholder='Reply' type='textarea' rows="4" cols="50" name='reply' required>&nbsp;
+          </textarea>
+        </div>
 
         <br>
 
@@ -56,9 +58,9 @@
 
     <div class='reply_box'>
 
-      <p><?php echo $reply['userName']; ?> Says:</p>
-      <p><?php echo $reply['reply']; ?></p>
-      <p><?php echo $reply['created']; ?></p>
+      <p class='font_2'><?php echo $reply['userName']; ?> Says:</p>
+      <p class='font_2'><?php echo $reply['reply']; ?></p>
+      <p class='font_2'><?php echo $reply['created']; ?></p>
 
       <?php if (isset($name)): ?>
 
