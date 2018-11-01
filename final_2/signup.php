@@ -44,23 +44,6 @@
 
     }
 
-    // if (empty($_POST["username"]) || empty($_POST["password"])){
-    //   $message = '<label>All Fields are required</label>';
-    // }else {
-    //   $query = "SELECT * FROM users WHERE username = :username AND password = :password";
-    //   $statement = $connect->prepare($query);
-    //   $statement->bindValue(':username', $username);
-    //   $statement->bindValue(':password', $password);
-    //   $statement->execute();
-    //   $count = $statement->rowCount();
-    //   if ($count > 0){
-    //     $_session["username"] = $username;
-    //     header("location:login_success.php");
-    //   }else {
-    //     $message = '<label>Wrong Data</label>';
-    //   }
-    // }
-
   }
 
 ?>
@@ -76,7 +59,7 @@
   <main class='landing_main' role='main'>
 
     <div class='landing_div'>
-      <h4 class='center'>Sign Up for Comments</h4>
+      <h4 class='center font'>Sign Up for Comments</h4>
       <?php 
         if (isset($message)){
           echo $message;
@@ -86,25 +69,25 @@
       <!-- Start of Sign up form -->
       <form method="post">
         <div class="form-group">
-          <label for="exampleInputEmail1">Username</label>
-          <input type="text" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+          <label class='font' for="exampleInputEmail1">Username</label>
+          <input type="text" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" required>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label class='font' for="exampleInputPassword1">Password</label>
+          <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password" required>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password Confirm</label>
-          <input type="password" name='password2' class="form-control" id="exampleInputPassword1" placeholder="Password Confirm">
+          <label class='font' for="exampleInputPassword1">Password Confirm</label>
+          <input type="password" name='password2' class="form-control" id="exampleInputPassword1" placeholder="Password Confirm" required>
         </div>
         <div class='center'>
-          <button type="submit" name="login" class="btn btn-primary">Submit</button>
+          <button type="submit" name="login" class="font btn btn-primary">Submit</button>
         </div>
       </form>
       <!-- End of Sign up form -->
 
       <div class='login_anchor center'>
-        <a href="index.php">Login Page</a>
+        <a class='font' href="index.php">Login Page</a>
       </div>
 
     </div>

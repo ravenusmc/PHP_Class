@@ -1,7 +1,7 @@
 /* This file deals with all the CSS for the home.php file in the comments folder */
 
 .jumbotron {
-  height: 500px;
+  height: 700px;
   background-image: url('../../assets/image/jumbo_image.jpg');
   background-size: cover;
   background-position: center;

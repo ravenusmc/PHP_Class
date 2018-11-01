@@ -12,7 +12,6 @@
 <link rel="stylesheet" type="text/css" href="../assets/css/generic.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/home.css">
 
-<?php if (isset($name)): ?>
 <!-- Start of Bootstrap jumbotron -->
 <div class="jumbotron img-fluid">
   <div class='text_background'>
@@ -32,6 +31,9 @@
 <!-- End of bootstrap jumbotron -->
 
 <h1 class='font center'>All Comments</h1>
+<div class='center'>
+  <a id='comment_change_2' class='font add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
+</div>
 <h3 class='font center'>There are currently <?php echo count($comments); ?>  Comments!</h3>
 <h3 class='font center'>There are currently <?php echo count($replies); ?> replies!</h3>
 
@@ -57,13 +59,17 @@
           </form>
 
           <!-- This conditional statement will only allow logged in users to delete/update comments -->
-          <?php if (isset($name)): ?>
+
 
             <!-- Form action to delete comment -->
             <form action="index.php" method="post">
               <input class='middle_form' type="hidden" name="action" value="delete_comment" />
               <input class='middle_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-              <input class='font_2 middle_form anchor_style' type="submit" value="Delete Comment" />
+              <?php if (isset($name)): ?>
+                <input class='font_2 middle_form anchor_style' type="submit" value="Delete Comment" />
+              <?php else:  ?>
+                <input type="hidden" class='font_2 middle_form anchor_style' type="submit" value="Delete Comment" />
+              <?php endif; ?>
             </form>
             <!-- End of form to delete comment -->
 
@@ -72,13 +78,16 @@
               <input class='see_form' type="hidden" name="action" value="update_comment_form" />
               <input class='see_form' type='hidden' name="user_id" value='<?php echo $id; ?>'>
               <input class='see_form' type='hidden' name="comment_id" value='<?php echo $comment['comment_id']; ?>'>
-              <input class='font_2 see_form anchor_style' type="submit" value="Update Comment" />
+              <?php if (isset($name)): ?>
+                <input class='font_2 see_form anchor_style' type="submit" value="Update Comment" />
+              <?php else:  ?>
+                <input type="hidden" class='font_2 see_form anchor_style' type="submit" value="Update Comment" />
+              <?php endif; ?>
             </form>
             <!-- End of form to updatecomment -->
 
           </div>
 
-        <?php endif; ?>
         <!-- End of conditional statement -->
 
       </div>
@@ -91,14 +100,7 @@
 <!-- End of loop -->
 </div>
 
-<?php else:  ?>
 
-    <div class='not_logged_in_div center'>
-      <h1>Please Sign Up!</h1>
-      <a class='sign_up_link' href="../signup.php">Sign Up</a>
-    </div>
-
-<?php endif; ?>
 
 <script type="text/javascript" src='../assets/js/home.js'></script>
 <?php include '../view/footer.php'; ?>
