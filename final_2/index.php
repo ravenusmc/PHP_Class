@@ -53,7 +53,7 @@
   <main class='landing_main' role='main'>
 
     <div class='landing_div'>
-      <h1 class='center'>Comments</h1>
+      <h1 class='font center'>Comments</h1>
       <?php 
         if (isset($message)){
           echo $message;
@@ -62,19 +62,19 @@
 
       <form method="post">
         <div class="form-group">
-          <label for="exampleInputEmail1">Username</label>
+          <label class='font' for="exampleInputEmail1">Username</label>
           <input type="text" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          <label class='font' for="exampleInputPassword1">Password</label>
           <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="font btn btn-primary">Submit</button>
       </form>
 
       <div class='anchor_div'>
-        <a href="signup.php">Sign Up</a>
-        <a href="comments">Go In</a>
+        <a class='font' href="signup.php">Sign Up</a>
+        <a class='font' href="comments">Go In</a>
       </div>
 
     </div>
