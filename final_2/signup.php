@@ -16,8 +16,6 @@
     $password = filter_input(INPUT_POST, 'password');
     $password2 = filter_input(INPUT_POST, 'password2');
 
-    echo $username;
-
     //Hashing the password 
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
@@ -31,6 +29,8 @@
     $count = $statement->rowCount();
     if ($count > 0){
       $message = '<label>Username Taken!</label>';
+    }else if ($password != $password2) {
+      $message = '<label class="errorMsg">Passwords Do Not Match!</label>';
     }else {
       $query = 'INSERT INTO users
                   (userName, password)
