@@ -31,9 +31,11 @@
 <!-- End of bootstrap jumbotron -->
 
 <h1 class='font center'>All Comments</h1>
+<?php if (isset($name)): ?>
 <div class='center'>
   <a id='comment_change_2' class='font add_comment_anchor' href="?action=add_comment_form">Add A Comment</a>
 </div>
+<?php endif; ?>
 <h3 class='font center'>There are currently <?php echo count($comments); ?>  Comments!</h3>
 <h3 class='font center'>There are currently <?php echo count($replies); ?> replies!</h3>
 

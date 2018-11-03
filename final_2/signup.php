@@ -41,9 +41,7 @@
       $statement->bindValue(':password', $password_hashed);
       $statement->execute();
       $statement->closeCursor(); 
-
     }
-
   }
 
 ?>
