@@ -16,7 +16,6 @@ N/A
 
 # Issues / other 
 
-
 # Preview
 
-To see this work please go to: 
+To see this work please go to: http://mcuddy12.info/2351/index.html
