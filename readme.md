@@ -9,7 +9,6 @@ The website, for this work, will be found here: http://mcuddy12.info/2351/index.
 1. PHP 7.1
 2. MySQL-5.6.26
 
-
 ### Operation
 
 N/A
@@ -20,4 +19,4 @@ N/A
 
 # Preview
 
-To see this work please go to: http://mcuddy12.info/2351/index.html
+To see this work please go to: http://mcuddy12.info/2351/index.html.
