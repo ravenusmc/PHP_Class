@@ -20,6 +20,6 @@ N/A
 
 # Preview
 
-To see this work please go to: http://mcuddy12.info/2351/index.html.
+To see this work please go to: http://mcuddy12.info/2351/index.html
 
 Video: N/A
