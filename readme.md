@@ -7,7 +7,7 @@ Link to PHP 1 Final: http://mcuddy12.info/2351/final/index.php
 
 Link to PHP 2 Final: http://mcuddy12.info/2351/final_2/index.php
 
-The work in this file went from January of 2018-December of 2018. 
+The work in this file went from January of 2018-December of 2018. I graduated from Gwinnett Technical College in December of 2018.
 
 ### Technology Stack
 
